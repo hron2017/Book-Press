@@ -1,0 +1,51 @@
+.up {
+  position: fixed;
+  display: none;
+  bottom: 50px;
+  right: 10px;
+  width: 40px;
+  height: 45px;
+  background: #ff0036;
+  z-index: 11;
+  border-radius: 7px 7px 0px 0px;
+  cursor: pointer; }
+
+@media (min-width: 767.98px) {
+  .up {
+    right: 25px;
+    width: 50px;
+    height: 65px; } }
+
+.up:after,
+.up:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 18px;
+  height: 2px;
+  background-color: #fff; }
+
+@media (min-width: 767.98px) {
+  .up:after,
+  .up:before {
+    width: 26px; } }
+
+.up:before {
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+  -ms-transform: translate(-50%, -50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
+  left: 14px; }
+
+@media (min-width: 767.98px) {
+  .up:before {
+    left: 15px; } }
+
+.up:after {
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  -ms-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+  right: -4px; }
+
+@media (min-width: 767.98px) {
+  .up:after {
+    right: -10px; } }

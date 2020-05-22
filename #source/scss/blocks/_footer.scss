@@ -1,0 +1,256 @@
+.col-cnt {
+   text-align: center;
+}
+
+.footer {
+   background-color: $darck;
+   padding-top: 53px;
+
+
+   @media (min-width:$md2+px) {
+      padding-bottom: 90px;
+   }
+
+   &-body {
+      display: flex;
+      justify-content: space-between;
+
+      @media (max-width:$md3+px) {
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+      }
+   }
+
+   &-col-center {
+      text-align: center;
+      flex: 1;
+
+
+      @media (max-width:$md3+px) {
+         order: 1;
+      }
+
+      @media (max-width:$md2+px) {
+         flex: 0 1 50%;
+      }
+   }
+
+   &-col-left {
+
+
+      @media (max-width:$md3+px) {
+         margin-bottom: 35px;
+         order: 2;
+      }
+   }
+
+   &-col-right {
+
+
+      @media (max-width:$md3+px) {
+         order: 2;
+      }
+   }
+
+   &__logo {
+      height: 65px;
+      margin-bottom: 30px;
+
+      img {
+         height: 100%;
+      }
+   }
+
+   &__text {
+      color: #fefefe;
+      font-family: "Futura PT";
+      font-size: 20px;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+   }
+
+   &__search {
+      max-width: 572px;
+      margin: 0 auto;
+
+      @media (min-width:$md4+px) {
+         margin-bottom: 28px;
+      }
+
+
+      .btn__red {
+         width: 205px;
+
+         @media (max-width:$md4+px) {
+            height: 45px;
+            margin-top: 14px;
+            margin-bottom: 28px;
+         }
+      }
+
+      .search__form-input {
+         @media (max-width:$md3+px) {
+            height: 45px;
+            text-align: center;
+         }
+
+         input {
+            @media (max-width:$md3+px) {
+
+               text-align: center;
+            }
+         }
+
+         &:after {
+            display: none;
+         }
+      }
+
+      @media (max-width:$md4+px) {
+         .search__form {
+            flex-direction: column;
+         }
+      }
+
+   }
+
+   &__contact {
+      text-align: right;
+
+      @media (max-width:$md3+px) {
+         text-align: center;
+      }
+
+      p {
+         color: #cccccc;
+         font-family: "Futura PT";
+         font-size: 18px;
+         font-weight: 500;
+         margin-bottom: 18px;
+
+         @media (max-width:$md3+px) {
+            display: none;
+         }
+      }
+
+   }
+
+   &__contact-email {
+      color: #ffffff;
+      display: inline-block;
+      font-family: "Futura PT";
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 35.59px;
+      border-bottom: 1px dashed #b8b8b8;
+      margin-bottom: 45px;
+   }
+
+}
+
+.footer-menu {
+
+   &__item {
+      @media (max-width:$md3+px) {
+         text-align: center;
+      }
+   }
+
+   &__link {
+      color: #ffffff;
+      font-family: "Futura PT";
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 36px;
+      position: relative;
+
+      display: block;
+
+
+      @media (min-width:$md3+px) {
+         padding-left: 25px;
+
+         &:before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 0;
+            border: 7px solid transparent;
+            border-left: 7px solid #fff;
+            opacity: 0;
+            @include anim(0.3s, 0s);
+         }
+      }
+
+
+      &:hover {
+         &:before {
+            opacity: 1;
+         }
+      }
+
+      &.active {
+         &:before {
+            opacity: 1;
+         }
+      }
+   }
+}
+
+.footer__contact-phone {
+   margin: 0;
+   text-align: right;
+
+   .phone {
+      &__link {
+         color: #ffffff;
+         font-weight: 400;
+
+         @media (max-width:$md3+px) {
+            font-size: 18px;
+         }
+      }
+   }
+}
+
+.scl-list {
+   word-spacing: -.36em;
+   text-align: right;
+
+   @media (max-width:$md3+px) {
+      text-align: center;
+      margin-bottom: 38px;
+   }
+
+   &__item {
+      display: inline-block;
+      margin-right: 20px;
+      width: 48px;
+      height: 48px;
+      border: 1px solid #eeeeee;
+      border-radius: 50%;
+      text-align: center;
+
+      &:last-child {
+         margin-right: 0;
+      }
+
+      @media (min-width:$md3+px) and (max-width:$md2+px) {
+         width: 32px;
+         height: 32px;
+      }
+   }
+
+   &__link {
+      font-size: 24px;
+      color: #eeeeee;
+      line-height: 48px;
+
+      @media(min-width:$md3+px) and (max-width:$md2+px) {
+         line-height: 32px;
+         font-size: 18px;
+      }
+   }
+}

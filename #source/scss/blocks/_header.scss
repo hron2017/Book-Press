@@ -1,0 +1,429 @@
+//====================================================================================================
+.header {
+   position: relative;
+   margin-bottom: -1px;
+
+   @media (min-width:1200px) {
+      background: linear-gradient(to right, $darck 40%, #f7f7f7 40%);
+
+      &:after {
+         content: '';
+         position: absolute;
+         top: 60%;
+         left: 0;
+         background: linear-gradient(to right, #fff 22%, transparent 22%);
+         width: 100%;
+         height: 1px;
+      }
+   }
+
+
+   &-row {
+      display: flex;
+   }
+
+   &-col__left {
+
+      padding-top: 21px;
+
+
+      @media (min-width:1200px) {
+         text-align: right;
+         padding: 21px 33px 0px 0px;
+         flex: 0 1 242px;
+         max-width: 242px;
+      }
+
+   }
+
+   &-col__right {
+      background-color: #f7f7f7;
+      flex: 1;
+      padding: 15px 0px 0px 30px;
+      margin-bottom: -1px;
+
+      @media (min-width:1200px) {
+         padding: 49px 0px 0px 30px;
+      }
+   }
+
+   &__logo {}
+}
+
+
+.header-middle {
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 26px;
+
+   @media (max-width:1200px) {
+      align-items: center;
+      justify-content: flex-end;
+   }
+
+   &__text {
+      display: none;
+      @include adaptiv-font(18, 12);
+      color: $darck;
+      color: #2d3138;
+      font-weight: 700;
+      line-height: 22px;
+      position: relative;
+
+      @media (min-width:1200px) {
+         display: block;
+      }
+   }
+
+   &__login {
+      @media (max-width:1200px) {
+         display: block;
+         text-align: center;
+         margin-bottom: 20px;
+      }
+
+      svg {
+         width: 38px;
+      }
+   }
+}
+
+.header-menu {
+   @media (max-width:$md3+px) {
+      padding-left: 15px;
+      border-bottom: 1px solid #606e37;
+   }
+
+   &__item {
+      display: inline-block;
+      margin-right: 15px;
+
+      @media (max-width:$md3+px) {
+         padding-left: 0 !important;
+
+         margin-bottom: 15px;
+      }
+
+      &:last-child {
+         margin-right: 0;
+      }
+
+      @media (min-width:$md2+px) {
+         margin-right: 32px;
+      }
+   }
+
+   &__link {
+      @include adaptiv-font(18, 12);
+
+      color: #fff;
+      font-weight: normal;
+      position: relative;
+
+      @media (min-width:700px) {
+         color: #25262a;
+
+         &:after {
+            content: '';
+            @include anim(0.3s, 0s);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            width: 0;
+            background-color: $darck;
+         }
+
+         &:hover {
+            &:after {
+               content: '';
+               width: 100%;
+            }
+         }
+      }
+   }
+}
+
+.phone {
+
+   text-align: center;
+
+   @media (min-width:1200px) {
+      margin-right: -50px;
+   }
+
+   &__link {
+      display: block;
+      @include adaptiv-font(18, 12);
+      color: $darck;
+      line-height: 22px;
+      font-weight: 700;
+
+      @media (max-width:1200px) {
+         color: #fff;
+      }
+   }
+}
+
+.header-bottom {
+   @extend .header-middle;
+
+   @media (max-width:1200px) {
+      display: none;
+   }
+
+   &__heading {
+      color: $red;
+      text-transform: uppercase;
+      padding-top: 7px;
+      @include adaptiv-font(24, 18);
+
+   }
+
+   &__personal {
+      display: flex;
+      justify-content: space-between;
+
+      @media (max-width:1200px) {
+         margin-left: 40px;
+      }
+   }
+
+   &__favorite {
+      position: relative;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      margin-right: 26px;
+
+      &:after {
+         content: "\f004";
+         font-family: "FontAwesome";
+         color: $acent;
+         font-size: 30px;
+
+         @media (min-width:$md2+px) {
+            font-size: 43px;
+         }
+      }
+   }
+
+   &__favorite-quant {
+      position: absolute;
+      top: -6px;
+      right: 6px;
+      height: 24px;
+      width: 24px;
+      border-radius: 50%;
+      display: inline-block;
+      line-height: 19px;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+      background-color: #fff;
+      border: 2px solid $acent;
+   }
+
+   &__favorite-text {
+      color: $acent;
+   }
+
+   &__cart {
+      position: relative;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+
+      &:after {
+         content: '\f218';
+         font-family: "FontAwesome";
+         color: $darck;
+         font-size: 30px;
+
+         @media (min-width:$md2+px) {
+            font-size: 43px;
+         }
+      }
+   }
+
+   &__cart-quant {
+      @extend .header-bottom__favorite-quant;
+      border: 2px solid $darck;
+      right: -2px;
+   }
+}
+
+.search {
+
+
+   @media (max-width:$md4+px) {
+      max-width: 320px;
+   }
+
+   @media (min-width:1200px) {
+      max-width: 537px;
+      padding-top: 7px;
+      max-width: 420px;
+      width: 100%;
+   }
+
+   &__form {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__form-input {
+      box-shadow: 0 0 4px 1px rgba(37, 38, 42, 0.11);
+      height: 34px;
+      flex: 1;
+      position: relative;
+
+      @media (min-width:$md2+px) {
+         margin-right: 15px;
+         height: 47px;
+      }
+
+      &:after {
+         content: '';
+         position: absolute;
+         top: 50%;
+         left: 20px;
+         width: 23px;
+         height: 23px;
+         background-image: url(../img/search.svg);
+         transform: translateY(-50%);
+         color: $darck;
+      }
+
+      &.focus {
+         &:after {
+            content: '';
+            opacity: 0;
+         }
+      }
+   }
+
+
+   &__form-btn {
+      background-color: $acent;
+      color: #fff;
+      height: 100%;
+      padding: 0px 48px 0px 48px;
+      font-size: 18px;
+      font-weight: 600;
+      @include anim(0.3s, 0s);
+
+      &:hover {
+         background-color: #7c9c09;
+      }
+   }
+}
+
+
+.page-home-scroll {
+   .search {
+      &__form-bottom {
+         @media (max-width:$md3+px) {
+            display: none;
+         }
+      }
+   }
+}
+
+@media (max-width:1200px) {
+   .header-menu__icon {
+      display: block;
+      position: relative;
+      width: 33px;
+      height: 23px;
+      cursor: pointer;
+      z-index: 5;
+
+      span {
+         @include anim(0.3s, 0s);
+         top: 9px;
+         left: 0px;
+         position: absolute;
+         width: 100%;
+         height: 4px;
+         background-color: #ffffff;
+         z-index: 3;
+
+         &:first-child {
+            top: 0px;
+         }
+
+         &:last-child {
+            top: auto;
+            bottom: 0px;
+         }
+      }
+
+      &.active {
+         @include anim(0.3s, 0s);
+         margin-left: 260px;
+
+
+         &:after {
+            content: '';
+            position: absolute;
+            top: -12px;
+            left: -8px;
+            width: 50px;
+            height: 50px;
+            background-color: #000;
+         }
+
+         span {
+            @include scale(0);
+
+            &:first-child {
+               @include rotate(-45deg);
+               top: 10px;
+            }
+
+            &:last-child {
+               @include rotate(45deg);
+               bottom: 8px;
+            }
+         }
+      }
+   }
+}
+
+
+/*
+font-family: "FontAwesome";
+
+
+
+\f1d8 <i class="far fa-paper-plane"></i>  - самолетик
+\f10d <i class="fas fa-quote-left"></i>  - кавычки
+\f00e <i class="fas fa-search-plus"></i>
+\f0c1 <i class="fas fa-link"></i>  --  линк
+\f061 <i class="fas fa-arrow-right"></i>
+\f060 <i class="fas fa-arrow-left"></i>
+\f107 <i class="fas fa-angle-down"></i>  -  angle-down
+\f106 <i class="fas fa-angle-up"></i>  -  angle-up
+\f3cd - телефон
+\f058 - check
+\f406 - account
+\f002, <i class="fas fa-search"></i> - поиск
+\f07a, <i class="fas fa-shopping-cart"></i>
+\f005, <i class="fas fa-star"></i> - звезда
+\f1b9, <i class="fas fa-car"></i>
+\f2f6, <i class="fas fa-sign-in-alt"></i> - лог ин
+\f0e0, <i class="fas fa-envelope"></i> - конверт
+\f879, <i class="fas fa-phone-alt"></i> - трубка телефона
+\f3c5, <i class="fas fa-map-marker-alt"></i> - локация
+\f017, <i class="far fa-clock"></i> - часы
+
+
+СОЦСЕТИ
+\f39e, <i class="fab fa-facebook-f"></i>
+\f099, <i class="fab fa-twitter"></i>
+\f0d5, <i class="fab fa-google-plus-g"></i>
+\f231, <i class="fab fa-pinterest-p"></i>
+\f16d, <i class="fab fa-instagram"></i>
+
+*/

@@ -1,0 +1,150 @@
+.articles-slider {
+   display: flex;
+   min-width: 0;
+   position: relative;
+
+   &__body {
+      min-width: 0;
+
+   }
+
+   &__control-arrow {
+      width: 23px;
+      height: 22px;
+      border-radius: 0 2px 2px 0;
+
+      background-color: $acent;
+      position: absolute;
+      top: 75px;
+      @include anim(0.3s, 0s);
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      @media (min-width:$md4+px) {
+         width: 38px;
+         height: 37px;
+         border-radius: 0 5px 5px 0;
+      }
+
+      @media (min-width:$md2+px) {
+         width: 57px;
+         height: 55px;
+      }
+
+      img {
+         @media (max-width:$md3+px) {
+            height: 13px;
+         }
+
+      }
+
+      &:hover {
+         background-color: $acent;
+      }
+
+      &.slick-disabled {
+         background-color: $darck;
+      }
+
+   }
+
+   &__control-arrow-prev {
+      left: 0;
+
+      @media (min-width:600px) {
+         left: 15px;
+      }
+
+   }
+
+   &__control-arrow-next {
+      right: 0;
+      transform: rotate(180deg);
+
+      @media (min-width:600px) {
+         right: 15px;
+      }
+   }
+
+   .slick-list {
+      overflow: visible;
+   }
+
+   .slick-slide {
+      overflow: visible;
+      opacity: 0;
+
+      &.slick-active {
+         opacity: 1;
+      }
+   }
+}
+
+.item-article {
+   box-shadow: 0 15px 29px 3px rgba(171, 171, 171, 0.18);
+   background-color: #fff;
+   flex: 0 1 270px;
+   @include anim(0.3s, 0s);
+
+
+   @media (min-width:$md4+px) {
+      margin: 0 15px;
+   }
+
+   &:hover {
+      box-shadow: 0 15px 29px 3px rgba(148, 148, 148, 0.34);
+   }
+
+   &__img {
+      padding-bottom: 58%;
+      position: relative;
+
+   }
+
+   &__body {
+      padding: 23px 21px 16px 16px;
+   }
+
+   &__heading {
+      color: $darck;
+      font-family: "Futura PT";
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 20px;
+      margin-bottom: 43px;
+   }
+
+   &__bottom {
+      color: #a1a1a1;
+      font-size: 12px;
+      font-weight: 500;
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__date {
+      display: flex;
+      flex-direction: row-reverse;
+
+      &:after {
+         content: '\f017';
+         font-family: "FontAwesome";
+         font-size: 12px;
+         color: $acent;
+         margin-right: 20px;
+      }
+
+
+   }
+
+   &__comment {
+      @extend .item-article__date;
+
+      &:after {
+         content: '\f075';
+      }
+   }
+}

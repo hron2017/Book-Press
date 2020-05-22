@@ -1,0 +1,65 @@
+//<RATING>====================================================================================================
+.rating-block {
+  display: table;
+  font-size: 0;
+}
+
+.rating {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  width: 85px;
+
+  &.edit .star {
+    cursor: pointer;
+  }
+
+  .star {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    position: relative;
+    z-index: 3;
+  }
+}
+
+.rating__line {
+  position: absolute;
+  width: 85px;
+  height: 9px;
+  top: 0;
+  left: 0;
+  background: url("../img/icons/bg_rating.svg") 0 0 no-repeat;
+  z-index: 1;
+  background-size: 85px 100%;
+
+  @media (min-width:$md3+px) {
+    height: 14px;
+  }
+}
+
+.rating__activeline {
+  position: absolute;
+  width: 0px;
+  height: 9px;
+  top: 0;
+  left: 0;
+  background: url("../img/icons/bg_rating_active.svg") 0 0 no-repeat;
+  z-index: 2;
+  background-size: 85px 100%;
+
+  @media (min-width:$md3+px) {
+    height: 14px;
+  }
+}
+
+.rating__value {
+  display: inline-block;
+  color: #1b3139;
+  font-size: 14px;
+  line-height: 13px;
+  vertical-align: bottom;
+  margin-left: 6px;
+}
+
+//</RATING>====================================================================================================

@@ -1,0 +1,8 @@
+$acent : #a6c632;
+$red : #b81d24;
+$darck: #2d3138;
+
+@function get-vw($object) {
+   $vw: (1920 * 0.01) * 1px;
+   @return ($object / $vw) * 1vw;
+}

@@ -1,0 +1,191 @@
+.present {
+   &__inner {
+      min-height: 377px;
+      position: relative;
+   }
+
+   .container {
+      padding: 0;
+   }
+
+   &-body {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      max-width: 305px;
+      width: 100%;
+      box-shadow: 0 15px 29px 3px rgba(171, 171, 171, 0.18);
+      background: linear-gradient(to right, #2d3138 10%, #fff 10%);
+
+      padding: 21px 0px 30px 49px;
+
+      @media (min-width:$md4+px) {
+         padding: 43px 0px 50px 230px;
+         max-width: 1039px;
+      }
+   }
+
+   &__heading {
+      color: $acent;
+      @include adaptiv-font(24, 14);
+      font-weight: 700;
+      line-height: 23.36px;
+      text-transform: uppercase;
+
+      border-bottom: 2px solid $acent;
+      margin-bottom: 16px;
+      padding-bottom: 16px;
+
+      @media (min-width:$md3+px) {
+         margin-bottom: 25px;
+         padding-bottom: 36px;
+      }
+   }
+
+   &__bg {
+      text-align: right;
+      position: relative;
+      max-width: 253px;
+      margin-left: auto;
+
+      @media (min-width:$md4+px) {
+         max-width: 1236px;
+      }
+
+      &:after {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-color: #1a1c1f;
+         opacity: 0.8;
+      }
+   }
+
+   &__login {
+      color: $darck;
+      font-family: "Futura PT";
+      @include adaptiv-font(24, 14);
+      font-weight: 500;
+      text-decoration: underline;
+      margin-bottom: 16px;
+
+
+   }
+
+   &__text {
+      @include adaptiv-font(24, 14);
+   }
+
+   &__text-acent {
+      display: block;
+      color: $acent;
+      font-family: "Futura PT";
+      @include adaptiv-font(18, 14);
+      font-weight: 500;
+      margin-top: 19px;
+      margin-bottom: 10px;
+
+      @media (min-width:$md4+px) {
+         margin-top: 16px;
+         margin-bottom: 11px;
+      }
+   }
+
+   &__text-big {
+      font-size: 46px;
+      @include adaptiv-font(46, 30);
+      font-weight: 600;
+      text-transform: uppercase;
+
+   }
+
+   &__image {
+
+      position: absolute;
+      right: -22%;
+      bottom: -31px;
+
+
+      @media (max-width:$md3+px) {
+         width: 179px;
+         height: 84px;
+      }
+
+      @media (max-width:$md3+px) {
+         bottom: -75px;
+      }
+   }
+
+   &__form {
+      max-width: 205px;
+      flex-direction: column;
+      width: 100%;
+
+      @media (min-width:$md3+px) {
+         max-width: 500px;
+         max-width: 300px;
+      }
+   }
+
+   &__form-input {
+      margin-top: 33px;
+      box-shadow: 0 0 4px rgba(37, 38, 42, 0.3);
+
+      &:after {
+         display: none;
+      }
+
+      input {
+         background-color: #f3f5f3;
+      }
+
+   }
+
+   &__form-bottom {
+      height: 38px;
+      margin-top: 17px;
+
+      @media (min-width:$md3+px) {
+         height: 55px;
+      }
+   }
+}
+
+
+
+
+
+
+
+/*.present {
+
+
+   
+
+   &-body {
+
+      
+      
+      
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+*/

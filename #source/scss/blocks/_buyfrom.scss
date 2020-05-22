@@ -1,0 +1,127 @@
+.buy-row {
+   display: flex;
+   justify-content: space-between;
+}
+
+.buy-col {
+
+
+   flex: 0 1 100%;
+   max-width: 100%;
+
+}
+
+.buy-col-sm {
+   flex: 0 1 23%;
+   max-width: 23%;
+   margin-left: 27px;
+
+   @media (max-width:$md2+px) {
+      display: none;
+   }
+
+   img {
+      height: 100%;
+   }
+}
+
+.buy-advant {
+   margin-bottom: 39px;
+
+   @media (min-width:$md3+px) {
+      margin-bottom: 95px;
+   }
+}
+
+.item-advant {
+
+   display: flex;
+   margin-bottom: 26px;
+
+
+   &__icon {
+      width: 15%;
+      flex: 0 1 15%;
+      margin-right: 18px;
+
+      @media (min-width:$md4+px) {
+         width: 10%;
+         flex: 0 1 10%;
+      }
+
+      @media (min-width:$md2+px) {
+         width: 4%;
+         flex: 0 1 4%;
+         margin-right: 58px;
+      }
+   }
+
+   &__text {
+      @include adaptiv-font(20, 16);
+      flex: 1;
+      text-align: justify;
+   }
+}
+
+
+
+.order {
+   &-block {
+      border: 2px solid #a6c632;
+      background-color: #ffffff;
+      padding: 23px 25px;
+
+      @media (min-width:$md3+px) {
+         padding: 46px 100px;
+      }
+   }
+
+   &-block__inner {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+   }
+
+   &__heading {
+      @extend .block-head__heading;
+      margin-bottom: 34px;
+   }
+
+   &__item {
+      display: flex;
+      max-width: 310px;
+      margin-bottom: 20px;
+   }
+
+   &__item-icon {
+      flex: 0 0 23px;
+      width: 23px;
+      height: 23px;
+      line-height: 23px;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 12px 19px 2px rgba(166, 198, 50, 0.33);
+      background-color: #a6c632;
+      border-radius: 50%;
+      margin-right: 13px;
+
+      @media (min-width:$md3+px) {
+         width: 30px;
+         height: 30px;
+         flex: 0 0 30px;
+         line-height: 30px;
+      }
+   }
+
+   &__item-text {
+      color: #a1a1a1;
+      font-family: "Futura PT";
+      @include adaptiv-font(18, 14);
+      font-weight: 600;
+
+
+      @media (min-width:$md3+px) {
+         line-height: 22px;
+      }
+   }
+}
