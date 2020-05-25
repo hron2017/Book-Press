@@ -1,33 +1,148 @@
-<div class="popup">
+<div class="popup popup-login">
 	<div class="popup-table table">
 		<div class="cell">
-			<div class="popup-content">
+			<div class="popup-content popup-login__content">
+				<div class="popup-image popup-login__image">
+					<img src="img/login-img.svg" alt="" />
+				</div>
 				<div class="popup-close"></div>
-				<div class="popup__title"></div>
-				<div class="popup__txt"></div>
-				<form action="#" class="popup-form form">
-					<div class="form-input">
-						<input autocomplete="off" type="text" name="form[]" data-value="" class="input" />
+				<div class="popup__title popup-login__title">войти</div>
+				<form action="#" class="popup-form form popup-login__form">
+					<div class="form-input popup-login__input">
+						<input autocomplete="off" type="email" name="form[]" data-value="Ваш телефон или e-mail"
+							class="input email req" />
 					</div>
-					<div class="form-input">
-						<input autocomplete="off" type="text" name="form[]" data-value="" class="input req email" />
+					<div class="form-input popup-login__input">
+						<input autocomplete="off" type="text" name="form[]" data-value="Ваш пароль" class="input" />
 					</div>
-					<div class="form-input">
-						<input autocomplete="off" type="text" name="form[]" data-value="" class="input req" />
+
+
+					<div class="popup-login__remember">
+						<input type="checkbox" class="popup-checkbox popup-login__checkbox" id="rememberMe">
+						<label for="rememberMe">Запомнить меня</label>
+
+						<a href="#" id="remindpass" class="popup-login__remindpass"><span>Напомнить пароль</span></a>
 					</div>
-					<div class="form-button">
-						<button type="submit" class="form__btn btn fw"></button>
+
+					<div class="form-button popup-login__button">
+						<button type="submit" class="form__btn btn ">Войти</button>
+
+						<a href="#registr" class="btn btn__register registr-link pl">Зарегистрироваться</a>
 					</div>
 				</form>
+
 			</div>
 		</div>
 	</div>
 </div>
-<div class="popup popup-video">
+<div class="popup popup-registr">
 	<div class="popup-table table">
 		<div class="cell">
-			<div class="popup-close"></div>
-			<div class="popup-video__value"></div>
+			<div class="popup-content popup-login__content">
+				<div class="popup-image popup-login__image">
+					<img src="img/login-img.svg" alt="" />
+				</div>
+				<div class="popup-close"></div>
+				<div class="popup__title popup-login__title">Регистрация</div>
+				<form action="#" class="popup-form form popup-login__form">
+
+					<div class="form-input popup-login__input">
+						<input autocomplete="off" type="text" name="form[]" data-value="Введите Ваше имя" class="input req" />
+					</div>
+					<div class="form-input popup-login__input">
+						<input autocomplete="off" type="email" name="form[]" data-value="Введите Ваш e-mail"
+							class="input email req" />
+					</div>
+					<div class="form-input popup-login__input">
+						<input autocomplete="off" type="tel" name="form[]" data-value="Введите телефон получателя"
+							class="input req" />
+					</div>
+					<div class="form-input popup-login__input">
+						<input autocomplete="off" type="text" name="form[]" data-value="Введите Ваш пароль"
+							class="input pass req" />
+					</div>
+					<div class="form-input popup-login__input">
+						<input autocomplete="off" type="text" name="form[]" data-value="Повторите Ваш пароль"
+							class="input pass req" />
+					</div>
+					<div class="popup-login__remember popup-registr__remember">
+						<input type="checkbox" class="popup-checkbox popup-registr__checkbox" id="agree">
+						<label for="agree">Соглашаюсь с <span> условиями использования</span> </label>
+					</div>
+
+					<div class="form-button popup-login__button">
+						<button type="submit" class="form__btn btn">Зарегистрироваться</button>
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="popup popup-fillform">
+	<div class="popup-table table">
+		<div class="cell">
+			<div class="popup-content popup-fillform__content">
+				<div class="popup-close"></div>
+
+				<form action="#" class="popup-form form popup-fillform__form">
+					<div class="popup__title popup-fillform__title">Заполните форму</div>
+					<div class="form-input popup-fillform__input">
+						<input autocomplete="off" type="email" name="form[]" data-value="Электронная почта"
+							class="input email req" />
+					</div>
+					<div class="form-input popup-fillform__input">
+						<input autocomplete="off" type="text" name="form[]" data-value="Ваше имя" class="input req" />
+					</div>
+					<div class="form-input popup-fillform__input">
+						<input autocomplete="off" type="text" name="form[]" data-value="Контактный телефон"
+							class="input req" />
+					</div>
+					<div class="form-input popup-fillform__input">
+						<input autocomplete="off" type="text" name="form[]" data-value="Оставьте комментарий"
+							class="input req" />
+					</div>
+					<div class="form-button popup-fillform__button">
+						<button type="submit" class="form__btn btn btn__red">Отправить</button>
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup popup-order">
+	<div class="popup-table table">
+		<div class="cell">
+			<div class="popup-content popup-fillform__content">
+				<div class="popup-close"></div>
+
+				<form action="#" class="popup-form form popup-order__form">
+					<div class="popup__title popup-order__title">Заказать</div>
+					<p class="popup__text   popup-order__text">желаемую книгу</p>
+					<div class="form-input popup-fillform__input">
+						<input autocomplete="off" type="email" name="form[]" data-value="Электронная почта"
+							class="input email req" />
+					</div>
+					<div class="form-input popup-fillform__input">
+						<input autocomplete="off" type="text" name="form[]" data-value="Ваше имя" class="input req" />
+					</div>
+					<div class="form-input popup-fillform__input">
+						<input autocomplete="off" type="text" name="form[]" data-value="Контактный телефон"
+							class="input req" />
+					</div>
+					<div class="form-input popup-fillform__input">
+						<input autocomplete="off" type="text" name="form[]" data-value="Оставьте комментарий"
+							class="input req" />
+					</div>
+					<div class="form-button popup-fillform__button">
+						<button type="submit" class="form__btn btn btn__red">Отправить</button>
+					</div>
+				</form>
+
+			</div>
 		</div>
 	</div>
 </div>

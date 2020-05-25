@@ -1,8 +1,6 @@
 .catalog-box__main {
    display: none;
 
-
-
    &.active {
       display: block;
    }
@@ -14,6 +12,8 @@
    justify-content: space-between;
 
    &__main {
+      width: 100%;
+
       @media (min-width:$md2+px) {
          flex: 0 1 77%;
          max-width: 77%;
@@ -22,7 +22,7 @@
    }
 
    &__right {
-
+      margin-left: 30px;
 
       @media (max-width:$md3+px) {
          display: none;
@@ -31,7 +31,6 @@
       @media (min-width:$md2+px) {
          flex: 0 1 23%;
          max-width: 23%;
-         margin-left: 30px;
       }
 
    }
@@ -69,62 +68,62 @@
 
 .catalog-cards {
    display: flex;
-   justify-content: space-between;
    flex-wrap: wrap;
-
-   @media (max-width:1200px) {
-      justify-content: space-around;
-   }
-
-
+   justify-content: space-around;
 }
 
+
 .item-cards {
-   flex: 0 1 40%;
-   width: 40%;
+   flex: 0 1 45%;
    display: flex;
    flex-direction: column;
-   padding: 12px 10px 16px 10px;
+   width: 45%;
+   text-align: left;
+   margin-bottom: 28px;
+   padding: 12px 10px 1px 10px;
    box-shadow: 0 15px 29px 3px rgba(171, 171, 171, 0.18);
    background-color: #ffffff;
    @include anim(0.3s, 0s);
-   margin-bottom: 28px;
    cursor: pointer;
-
-   @media (min-width:1200px) {
-      flex: 0 1 27%;
-      width: 27%;
-   }
-
-   @media (min-width:$md3+px) {
-      padding: 22px 20px 26px 20px;
-   }
 
    &:hover {
       box-shadow: 0 15px 29px 3px rgba(148, 148, 148, 0.34);
    }
 
+   @media (min-width:600px) {
+      flex: 0 1 30%;
+      width: 30%;
+
+   }
+
+   @media (min-width:$md3+px) {
+      flex: 0 1 45%;
+      width: 45%;
+      padding: 22px 20px 26px 20px;
+   }
+
+   @media (min-width:1200px) {
+      flex: 0 1 30%;
+      width: 30%;
+   }
+
+
    &__block {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      margin-bottom: 10px;
-
-      &-btn {
-         @media (max-width:$md4+px) {
-            flex-direction: column-reverse;
-         }
-      }
+      margin-bottom: 15px;
 
       &-price {
-         flex-direction: column;
+         flex-direction: column-reverse;
          align-items: flex-start;
+         margin-top: 10px;
       }
-   }
 
-   &__reting {
-      @media (min-width:$md3+px) {
-         margin-left: 10px;
+      &-btn {
+         @media (max-width:$md3+px) {
+            flex-direction: column-reverse;
+            justify-content: center;
+         }
       }
    }
 
@@ -149,24 +148,22 @@
    }
 
    &__img {
-
       max-width: 54px;
       max-height: 82px;
       margin: 0 auto;
-      margin-bottom: 38px;
+      margin-bottom: 11px;
       flex-grow: 1;
 
       @media (min-width:$md3+px) {
          max-width: 129px;
          max-height: 199px;
+         margin-bottom: 30px;
       }
    }
-
 
    &__name {
       color: $darck;
       font-weight: 600;
-      text-transform: capitalize;
       @include adaptiv-font(18, 12);
 
       @media (min-width:$md2+px) {
@@ -176,22 +173,15 @@
    }
 
    &__price {
-      color: $darck;
       @include adaptiv-font(24, 14);
       font-weight: 600;
-      margin-top: 8px;
-      margin-bottom: 10px;
-
-      @media (min-width:$md3+px) {
-         margin-top: 18px;
-         margin-bottom: 23px;
-      }
    }
 
    &__avtor {
       color: #a1a1a1;
       @include adaptiv-font(16, 12);
       font-weight: 900;
+      line-height: 17px;
 
       @media (min-width:$md2+px) {
          line-height: 21.86px;
@@ -200,11 +190,11 @@
 
 }
 
-
 .right-box {
 
    &__banner {
       margin-bottom: 30px;
+      text-align: center;
    }
 }
 
@@ -234,6 +224,7 @@
    }
 }
 
+
 .item-rec {
    display: flex;
 
@@ -243,7 +234,6 @@
    }
 
    &__img {
-
       max-width: 44px;
       width: 100%;
       max-height: 73px;
@@ -255,11 +245,9 @@
    }
 
    &__block {
-
       @media (max-width:$md2+px) {
          text-align: center;
       }
-
    }
 
    &__name {
@@ -278,7 +266,6 @@
 
    &__price {
       color: $darck;
-      font-size: 18px;
       @include adaptiv-font(18, 12);
       font-weight: 600;
       line-height: 21.86px;

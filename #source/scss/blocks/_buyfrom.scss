@@ -4,10 +4,10 @@
 }
 
 .buy-col {
-
-
-   flex: 0 1 100%;
-   max-width: 100%;
+   @media (min-width:$md2+px) {
+      flex: 0 1 77%;
+      max-width: 77%;
+   }
 
 }
 

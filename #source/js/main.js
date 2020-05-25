@@ -6,6 +6,8 @@
 //@prepros-append blocks/forms.js
 //@prepros-append blocks/tabs.js
 //@prepros-append blocks/rating.js
+//@prepros-append blocks/check.js
+
 
 
 //@prepros-append script.js

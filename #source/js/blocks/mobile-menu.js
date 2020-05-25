@@ -49,13 +49,13 @@ function adaptive_header(w, h) {
 		}
 
 	}
-
-	if (w < 600) {
-		$('.present__bg').html('<img src="img/present/present-bg-mobile.jpg" alt="" />');
-	} else {
-		$('.present__bg').html('<img src="img/present/present-bg.jpg" alt="" />')
-	}
-
+	/*
+		if (w < 600) {
+			$('.present__bg').html('<img src="img/present/present-bg-mobile.jpg" alt="" />');
+		} else {
+			$('.present__bg').html('<img src="img/present/present-bg.jpg" alt="" />')
+		}
+	*/
 }
 function adaptive_function() {
 	var w = $(window).outerWidth();

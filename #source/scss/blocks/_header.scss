@@ -65,7 +65,6 @@
       display: none;
       @include adaptiv-font(18, 12);
       color: $darck;
-      color: #2d3138;
       font-weight: 700;
       line-height: 22px;
       position: relative;
@@ -89,7 +88,7 @@
 }
 
 .header-menu {
-   @media (max-width:$md3+px) {
+   @media (max-width:600px) {
       padding-left: 15px;
       border-bottom: 1px solid #606e37;
    }
@@ -361,8 +360,8 @@
 
       &.active {
          @include anim(0.3s, 0s);
-         margin-left: 260px;
-
+         // margin-left: 260px;
+         transform: translateX(260px);
 
          &:after {
             content: '';

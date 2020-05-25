@@ -67,8 +67,8 @@
    &__btn {
       flex-direction: row-reverse;
 
-      @media (max-width:$md4+px) {
-         margin-bottom: 4px;
+      @media (max-width:$md3+px) {
+         margin-bottom: 5px;
       }
 
       &:after {

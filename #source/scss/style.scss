@@ -26,7 +26,7 @@ $md4: 576.98;
 
 //</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
 body {
-  color: #25262a;
+  color: $darck;
   font-weight: 500;
   @include adaptiv-font(18, 12);
 
@@ -92,11 +92,15 @@ body {
 
 
 @import "ui/_ui";
+@import "ui/_up";
+
 @import "ui/_forms";
 @import "ui/_btn";
 @import "ui/_slick";
 @import "blocks/_heading";
 @import "ui/_rating";
+@import "ui/_check";
+
 
 
 @import "blocks/_header";

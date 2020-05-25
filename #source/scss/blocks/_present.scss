@@ -1,56 +1,49 @@
 .present {
-   &__inner {
-      min-height: 377px;
-      position: relative;
-   }
-
    .container {
       padding: 0;
    }
 
-   &-body {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-      max-width: 305px;
-      width: 100%;
-      box-shadow: 0 15px 29px 3px rgba(171, 171, 171, 0.18);
-      background: linear-gradient(to right, #2d3138 10%, #fff 10%);
-
-      padding: 21px 0px 30px 49px;
-
-      @media (min-width:$md4+px) {
-         padding: 43px 0px 50px 230px;
-         max-width: 1039px;
-      }
+   &-col-left {
+      flex: 0 1 10%;
+      background-color: $darck;
    }
 
-   &__heading {
-      color: $acent;
-      @include adaptiv-font(24, 14);
-      font-weight: 700;
-      line-height: 23.36px;
-      text-transform: uppercase;
+   &-col-right {
+      padding: 21px 10px 30px 25px;
+   }
 
-      border-bottom: 2px solid $acent;
-      margin-bottom: 16px;
-      padding-bottom: 16px;
+   &__inner {
+      display: flex;
+      flex-direction: row-reverse;
+      position: relative;
+   }
 
-      @media (min-width:$md3+px) {
-         margin-bottom: 25px;
-         padding-bottom: 36px;
-      }
+   &-body {
+      display: flex;
+      width: 90%;
+      //background: linear-gradient(to right, #2d3138 10%, #fff 10%);
+      box-shadow: 0 15px 29px 3px rgba(171, 171, 171, 0.18);
+      background-color: #fff;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+
    }
 
    &__bg {
-      text-align: right;
+      min-height: 377px;
       position: relative;
-      max-width: 253px;
+      width: 90%;
       margin-left: auto;
 
-      @media (min-width:$md4+px) {
-         max-width: 1236px;
+
+      @media (min-width:$md3+px) {
+         min-height: 480px;
+      }
+
+      @media (min-width:1200px) {
+         min-height: 570px;
       }
 
       &:after {
@@ -63,6 +56,33 @@
          background-color: #1a1c1f;
          opacity: 0.8;
       }
+
+      img {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__heading {
+      color: $acent;
+      @include adaptiv-font(24, 14);
+      font-weight: 700;
+      line-height: 15.0px;
+      text-transform: uppercase;
+
+      border-bottom: 2px solid $acent;
+      margin-bottom: 16px;
+      padding-bottom: 16px;
+
+      @media (min-width:$md3+px) {
+         margin-bottom: 25px;
+         padding-bottom: 36px;
+         line-height: 23.0px;
+      }
    }
 
    &__login {
@@ -71,9 +91,6 @@
       @include adaptiv-font(24, 14);
       font-weight: 500;
       text-decoration: underline;
-      margin-bottom: 16px;
-
-
    }
 
    &__text {
@@ -86,38 +103,15 @@
       font-family: "Futura PT";
       @include adaptiv-font(18, 14);
       font-weight: 500;
-      margin-top: 19px;
+      margin-top: 16px;
       margin-bottom: 10px;
-
-      @media (min-width:$md4+px) {
-         margin-top: 16px;
-         margin-bottom: 11px;
-      }
    }
 
    &__text-big {
-      font-size: 46px;
       @include adaptiv-font(46, 30);
       font-weight: 600;
       text-transform: uppercase;
 
-   }
-
-   &__image {
-
-      position: absolute;
-      right: -22%;
-      bottom: -31px;
-
-
-      @media (max-width:$md3+px) {
-         width: 179px;
-         height: 84px;
-      }
-
-      @media (max-width:$md3+px) {
-         bottom: -75px;
-      }
    }
 
    &__form {
@@ -126,8 +120,7 @@
       width: 100%;
 
       @media (min-width:$md3+px) {
-         max-width: 500px;
-         max-width: 300px;
+         max-width: 355px;
       }
    }
 
@@ -142,50 +135,38 @@
       input {
          background-color: #f3f5f3;
       }
-
    }
 
    &__form-bottom {
       height: 38px;
       margin-top: 17px;
 
-      @media (min-width:$md3+px) {
+      @media (min-width:1200px) {
          height: 55px;
       }
    }
-}
+
+   &__image {
+      position: absolute;
+      right: -22%;
+      bottom: -31px;
+      width: 179px;
+      height: auto;
 
 
+      @media (min-width:600px) {
+         right: -10%;
+      }
+
+      @media (min-width:850px) {
+         width: 300px;
+      }
+
+      @media (min-width:1200px) {
+         width: auto;
+         bottom: -93px;
+      }
 
 
-
-
-
-/*.present {
-
-
-   
-
-   &-body {
-
-      
-      
-      
    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
-*/

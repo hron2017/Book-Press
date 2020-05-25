@@ -88,6 +88,10 @@
             margin-top: 14px;
             margin-bottom: 28px;
          }
+
+         @media (max-width:$md2+px) {
+            width: 135px;
+         }
       }
 
       .search__form-input {

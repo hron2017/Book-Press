@@ -6,6 +6,8 @@
 //@prepros-append blocks/forms.js
 //@prepros-append blocks/tabs.js
 //@prepros-append blocks/rating.js
+//@prepros-append blocks/check.js
+
 
 
 //@prepros-append script.js
@@ -82,13 +84,13 @@ function adaptive_header(w, h) {
 		}
 
 	}
-
-	if (w < 600) {
-		$('.present__bg').html('<img src="img/present/present-bg-mobile.jpg" alt="" />');
-	} else {
-		$('.present__bg').html('<img src="img/present/present-bg.jpg" alt="" />')
-	}
-
+	/*
+		if (w < 600) {
+			$('.present__bg').html('<img src="img/present/present-bg-mobile.jpg" alt="" />');
+		} else {
+			$('.present__bg').html('<img src="img/present/present-bg.jpg" alt="" />')
+		}
+	*/
 }
 function adaptive_function() {
 	var w = $(window).outerWidth();
@@ -551,6 +553,26 @@ $.each($('.rating'), function (index, val) {
 function setrating(th, val) {
 	th.find('.rating__activeline').css({ width: val + '%' });
 }
+//CHECK
+$.each($('.check'), function (index, val) {
+	if ($(this).find('input').prop('checked') == true) {
+		$(this).addClass('active');
+	}
+});
+$('body').off('click', '.check', function (event) { });
+$('body').on('click', '.check', function (event) {
+	if (!$(this).hasClass('disable')) {
+		var target = $(event.target);
+		if (!target.is("a")) {
+			$(this).toggleClass('active');
+			if ($(this).hasClass('active')) {
+				$(this).find('input').prop('checked', true);
+			} else {
+				$(this).find('input').prop('checked', false);
+			}
+		}
+	}
+});
 //====================  SCROLL ========================//
 $(window).scroll(function (event) {
 	var scr = $(this).scrollTop();
@@ -661,7 +683,7 @@ $('.articles-slider__body').slick({
 		},
 
 		{
-			breakpoint: 480,
+			breakpoint: 600,
 			settings: {
 				slidesToShow: 1,
 				slidesToScroll: 1
