@@ -1,0 +1,109 @@
+.one-article {
+   &__intro {
+      min-height: 212px;
+      background: url(../img/one-article/one-article-bg.jpg) 0 0 no-repeat;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+
+      @media (max-width:$md2+px) {
+         margin-bottom: 120px;
+      }
+
+      @media (min-width:$md2+px) {
+         min-height: 326px;
+         margin-bottom: 180px;
+      }
+   }
+
+   &__heading {
+
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.24);
+      background-color: #f7f7f7;
+      padding: 30px 20px 30px 20px;
+      @include adaptiv-font(30, 20);
+      font-weight: 600;
+      text-align: center;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 2;
+
+      @media (max-width:$md3+px) {
+         padding: 30px 20px 30px 20px;
+      }
+
+
+      @media (max-width:1200px) {
+         margin: 0px 15px -95px 15px;
+         max-width: 750px;
+
+      }
+
+      @media (min-width:$md3+px) {
+         padding: 50px;
+      }
+
+      @media (min-width:1200px) {
+         padding: 80px 110px 80px 110px;
+         line-height: 42px;
+         margin: 0px 15px -135px 15px;
+         max-width: 1071px;
+      }
+   }
+}
+
+
+.article-content {
+   padding: 0px 10px 0px 10px;
+
+   @media (max-width:600px) {
+      margin-bottom: 53px;
+   }
+
+   @media (min-width:600px) {
+      max-width: 750px;
+      margin: 0 auto;
+      margin-bottom: 53px;
+   }
+
+   &__img {
+      margin-bottom: 27px;
+   }
+
+   &__text {
+      margin-bottom: 27px;
+      @include adaptiv-font(20, 18);
+      text-align: justify;
+
+      @media (min-width:$md2+px) {
+         line-height: 25px;
+      }
+   }
+
+   &__bottom {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 10px;
+   }
+
+   &__date {
+      color: #6f6f6f;
+      font-size: 14px;
+      padding: 7px;
+   }
+
+   &__comment {
+      color: $acent;
+      font-size: 14px;
+      padding: 7px;
+
+      span {
+         display: inline-block;
+         margin-left: 7px;
+         color: #2d3138;
+      }
+
+   }
+}

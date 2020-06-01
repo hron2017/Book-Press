@@ -7,11 +7,11 @@
 //@prepros-append blocks/tabs.js
 //@prepros-append blocks/rating.js
 //@prepros-append blocks/check.js
-
-
+//@prepros-append blocks/select.js
+//@prepros-append blocks/dynamic_adapt.js
 
 //@prepros-append script.js
-//@prepros-append blocks/dynamic_adapt.js
+
 //@prepros-append jq-end.js
 
 

@@ -30,7 +30,6 @@ body {
   font-weight: 500;
   @include adaptiv-font(18, 12);
 
-
   &.lock {
     overflow: hidden;
   }
@@ -44,6 +43,10 @@ body {
   margin: 0 auto;
 }
 
+.container-sm {
+  max-width: 1100px;
+}
+
 //<ОБОЛОЧКА>===========================================================================================================
 .wrapper {
   width: 100%;
@@ -53,7 +56,7 @@ body {
   &.loaded {}
 }
 
-.page-home {
+.page {
   background-color: #f7f7f7;
 }
 
@@ -65,10 +68,31 @@ body {
   }
 }
 
-.page-home-scroll {
-  position: fixed;
-  top: 80px;
-  left: 0;
+.sitebar {
+  @media (min-width:1200px) {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.bg {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.49;
+  }
+}
+
+.page-scroll {
+  position: relative;
+  @include anim(0.3s, 0s);
   width: 100%;
   z-index: 11;
   background-color: $darck;
@@ -76,6 +100,16 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width:1200px) {
+    display: none;
+  }
+
+  &.scroll {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+  }
 }
 
 //</ОБОЛОЧКА>===========================================================================================================
@@ -100,6 +134,8 @@ body {
 @import "blocks/_heading";
 @import "ui/_rating";
 @import "ui/_check";
+@import "ui/_select";
+
 
 
 
@@ -108,11 +144,19 @@ body {
 @import "blocks/_main";
 @import "blocks/_present";
 @import "blocks/_buyfrom";
-
-
-
 @import "blocks/_section-acticle";
 
+@import "product-card/_product-card";
+
+@import "delivery/_delivery";
+
+@import "about/_about";
+
+@import "blog/_blog";
+@import "blog/_one-article";
+@import "blocks/_stocks";
+@import "blocks/_personal-area";
+@import "blocks/_card";
 
 @import "blocks/_footer";
 @import "blocks/_popup";

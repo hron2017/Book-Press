@@ -88,7 +88,7 @@
 }
 
 .header-menu {
-   @media (max-width:600px) {
+   @media (max-width:$md3+px) {
       padding-left: 15px;
       border-bottom: 1px solid #606e37;
    }
@@ -147,7 +147,7 @@
 
    text-align: center;
 
-   @media (min-width:1200px) {
+   @media (min-width:1400px) {
       margin-right: -50px;
    }
 
@@ -194,6 +194,7 @@
       flex-direction: column-reverse;
       align-items: center;
       margin-right: 26px;
+      color: $darck;
 
       &:after {
          content: "\f004";
@@ -232,6 +233,7 @@
       display: flex;
       flex-direction: column-reverse;
       align-items: center;
+      color: $darck;
 
       &:after {
          content: '\f218';
@@ -282,14 +284,17 @@
          height: 47px;
       }
 
+   }
+
+   .header-search__form-input {
       &:after {
          content: '';
          position: absolute;
          top: 50%;
          left: 20px;
-         width: 23px;
-         height: 23px;
-         background-image: url(../img/search.svg);
+         width: 20px;
+         height: 20px;
+         background: url(../img/search.svg) 0 0 no-repeat;
          transform: translateY(-50%);
          color: $darck;
       }
@@ -306,20 +311,24 @@
    &__form-btn {
       background-color: $acent;
       color: #fff;
-      height: 100%;
-      padding: 0px 48px 0px 48px;
-      font-size: 18px;
+
+      //padding: 0px 48px 0px 48px;
+      @include adaptiv-font(18, 14);
       font-weight: 600;
       @include anim(0.3s, 0s);
 
       &:hover {
          background-color: #7c9c09;
       }
+
+      @media (min-width:$md4+px) {
+         height: 100%;
+      }
    }
 }
 
 
-.page-home-scroll {
+.page-scroll {
    .search {
       &__form-bottom {
          @media (max-width:$md3+px) {

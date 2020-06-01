@@ -1,0 +1,412 @@
+.breadcrumbs {
+   margin: 15px 0 26px 0;
+
+   &__list {}
+
+   &__item {
+      display: inline-block;
+      padding: 0 5px;
+      position: relative;
+
+      &:after {
+         content: '';
+         position: absolute;
+         top: 7px;
+         right: -2px;
+         width: 3px;
+         height: 1px;
+         background-color: #a1a1a1;
+      }
+
+      &:last-child {
+         &:after {
+            display: none;
+         }
+      }
+   }
+
+   &__link {
+      color: #a1a1a1;
+      font-family: "Futura PT";
+      font-size: 12px;
+      font-weight: 500;
+   }
+}
+
+
+
+.product-card {
+
+   &__item {
+
+      background-color: #fff;
+      border-bottom: 1px solid #ebebeb;
+      margin-bottom: 17px;
+      display: flex;
+
+
+      @media (min-width:$md4+px) {
+         border: 1px solid #ebebeb;
+         padding: 0px 15px 0 35px;
+      }
+
+      @media (min-width:$md2+px) {
+         justify-content: space-between;
+      }
+   }
+}
+
+.card-item {
+
+   &__left {
+
+      @media (min-width:$md3+px) {
+         border-right: 1px solid #ebebeb;
+         padding-top: 35px;
+      }
+
+      @media (min-width:$md2+px) {
+         flex: 0 1 360px;
+         width: 360px;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+
+      }
+   }
+
+   &__img {
+      width: 63px;
+      margin-right: 12px;
+
+      @media (min-width:$md3+px) {
+         margin-right: 32px;
+      }
+
+      @media (min-width:$md2+px) {
+         width: 158px;
+      }
+   }
+
+   &__center {
+
+      @media (min-width:$md3+px) {
+         padding: 35px 15px 0px 15px;
+      }
+
+      @media (min-width:$md2+px) {
+         //padding-top: 38px;
+
+         flex: 1 1 auto;
+      }
+   }
+
+   &__heading {
+      @media (min-width:$md3+px) {
+         border-bottom: 1px solid #ebebeb;
+      }
+   }
+
+   &__title {
+      color: #25262a;
+      @include adaptiv-font(18, 14);
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+
+
+      &-mod {
+         display: flex;
+         flex-direction: row-reverse;
+         justify-content: flex-end;
+
+         &:after {
+            content: '';
+            background-image: url(../img/card-item-icon-01.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 31px;
+            height: 20px;
+            margin-right: 10px;
+         }
+      }
+
+
+      @media (min-width:$md2+px) {
+         line-height: 23px;
+      }
+   }
+
+   &__avtor {
+      color: #a1a1a1;
+      font-family: "Futura PT";
+      @include adaptiv-font(18, 12);
+      font-weight: 900;
+      margin-bottom: 12px;
+   }
+
+   &__price {
+      font-size: 18px;
+      font-weight: 900;
+      padding: 25px 0px 15px 0px;
+      margin-bottom: 25px;
+
+      @media (min-width:$md3+px) {
+         border-bottom: 1px solid #ebebeb;
+      }
+   }
+
+   &__bottom {
+
+      @media (max-width:$md4+px) {
+         text-align: right;
+      }
+   }
+
+   &__favotite {
+      margin-bottom: 21px;
+      color: #25262a;
+      font-size: 12px;
+      font-weight: 500;
+      position: relative;
+      display: inline-flex;
+      flex-direction: row-reverse;
+
+      &:after {
+         content: '';
+         width: 20px;
+         height: 17px;
+         background-image: url(../img/no-favoritet.svg);
+         background-repeat: no-repeat;
+         background-position: center;
+         cursor: pointer;
+         margin-right: 7px;
+      }
+
+      &.item-cards__favorite-add {
+         &:after {
+            background-image: url(../img/favoritet.svg);
+         }
+      }
+   }
+
+   .item-cards__btn-click {
+      margin-right: 0;
+
+      @media (min-width:$md4+px) {
+         margin-left: 30px;
+      }
+   }
+
+   &__btn {
+      @media (max-width:$md4+px) {
+         display: flex;
+         flex-direction: column;
+         align-items: flex-end;
+      }
+   }
+
+   &__right {
+
+      flex: 0 1 360px;
+      width: 360px;
+      padding: 35px 51px 0px 31px;
+
+      @media (max-width:$md3+px) {
+         display: none;
+      }
+
+      @media (min-width:$md3+px) {
+         border-left: 1px solid #ebebeb;
+      }
+   }
+
+   &__block {
+      margin-bottom: 33px;
+
+      &-center {
+
+         @media (max-width:$md4+px) {
+            display: flex;
+            justify-content: space-between;
+         }
+      }
+
+      li {
+         font-size: 18px;
+         line-height: 22px;
+         position: relative;
+         padding-left: 10px;
+
+         &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            margin-top: -2px;
+            left: 0;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: $darck;
+         }
+      }
+   }
+
+   &__text {
+      font-family: "Futura PT";
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 22px;
+      text-align: justify;
+   }
+}
+
+
+.card-info {
+   background-color: #fff;
+   margin-bottom: 48px;
+
+   @media (min-width:$md4+px) {
+      border: 1px solid #ebebeb;
+   }
+
+   &__nav {
+      margin-bottom: 24px;
+
+      @media (min-width:$md3+px) {
+         display: flex;
+         border-bottom: 2px solid #ebebeb;
+         padding: 0px 30px 0px 30px;
+      }
+   }
+
+   &__navitem {
+      text-align: center;
+      color: #2d3138;
+      font-family: "Futura PT";
+      font-size: 16px;
+      font-weight: 900;
+      line-height: 36px;
+      text-transform: uppercase;
+      cursor: pointer;
+      position: relative;
+
+      &:after {
+         content: '';
+         position: absolute;
+         bottom: 0;
+         left: 50%;
+         transform: translateX(-50%);
+         background-color: #a6c632;
+         width: 70%;
+         height: 2px;
+         @include anim(0.3s, 0s);
+         opacity: 0;
+      }
+
+      @media (min-width:$md3+px) {
+
+         margin-right: 30px;
+
+         &:last-child {
+            margin-right: 0;
+         }
+
+         &:after {
+            width: 100%;
+         }
+      }
+
+      &:hover {
+         &:after {
+            opacity: 1;
+         }
+      }
+
+      &.active {
+         &:after {
+            opacity: 1;
+         }
+      }
+   }
+
+   &__items {
+      border-bottom: 2px solid #ebebeb;
+
+      padding-bottom: 20px;
+   }
+
+   &__item {
+      color: #2d3138;
+      font-family: "Futura PT";
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+      text-align: justify;
+      padding: 0px 0px 0px 0px;
+
+      @media (min-width:$md3+px) {
+         padding: 0px 30px 0px 30px;
+      }
+   }
+}
+
+
+.comment-review {
+   max-width: 1138px;
+   margin: 0 auto;
+
+   &__head {}
+
+   &__heading {
+      color: $acent;
+      font-family: "Futura PT";
+      font-size: 18px;
+      font-weight: 900;
+      margin-bottom: 17px;
+   }
+
+   &__form {
+      input {
+         height: 40px;
+         background-color: #ffffff;
+         margin-bottom: 11px;
+
+         &:first-child {
+            max-width: 355px;
+         }
+      }
+   }
+
+   &__btn {
+      display: inline-block;
+      color: $darck;
+      font-family: "Futura PT";
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+      border-bottom: 2px solid $acent;
+      margin-bottom: 53px;
+      @include anim(0.3s, 0s);
+
+      &:hover {
+         color: #000000;
+      }
+   }
+
+   &__avtor {
+      color: #000000;
+      font-size: 14px;
+      font-weight: 900;
+      line-height: 20px;
+   }
+
+   &__text {
+      color: #000000;
+      font-family: "Futura PT";
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 18px;
+      margin: 20px 0;
+   }
+}

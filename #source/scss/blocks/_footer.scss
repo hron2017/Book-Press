@@ -81,16 +81,10 @@
 
 
       .btn__red {
-         width: 205px;
-
          @media (max-width:$md4+px) {
             height: 45px;
             margin-top: 14px;
             margin-bottom: 28px;
-         }
-
-         @media (max-width:$md2+px) {
-            width: 135px;
          }
       }
 
@@ -102,13 +96,8 @@
 
          input {
             @media (max-width:$md3+px) {
-
                text-align: center;
             }
-         }
-
-         &:after {
-            display: none;
          }
       }
 
@@ -223,6 +212,7 @@
    word-spacing: -.36em;
    text-align: right;
 
+
    @media (max-width:$md3+px) {
       text-align: center;
       margin-bottom: 38px;
@@ -251,6 +241,7 @@
       font-size: 24px;
       color: #eeeeee;
       line-height: 48px;
+      display: block;
 
       @media(min-width:$md3+px) and (max-width:$md2+px) {
          line-height: 32px;

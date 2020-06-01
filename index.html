@@ -7,7 +7,14 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="shortcut icon" href="favicon.ico">
+
+	<link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+	<link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+
 	<script src="https://kit.fontawesome.com/e7a39f0f13.js" crossorigin="anonymous"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 </head>
@@ -19,11 +26,11 @@
    <div class='container'>
       <div class="header-row">
          <div class="header-col header-col__left">
-            <a href="" class="header__logo logo">
+            <a href="index.html" class="header__logo logo">
                <img src="img/logo.png" alt="" />
             </a>
          </div>
-         <div class="header-menu__icon" data-da="page-home-scroll, 1,1200">
+         <div class="header-menu__icon" data-da="page-scroll, 1,1200">
             <span></span>
             <span></span>
             <span></span>
@@ -33,12 +40,13 @@
                <span class="header-middle__text">Online магазин<br>бизнес литературы</span>
                <nav class="header-middle__menu header-menu" data-da="sitebar, first, 700">
                   <ul class="header-menu__list">
-                     <li class="header-menu__item"><a href="" class="header-menu__link">О нас</a></li>
+                     <li class="header-menu__item"><a href="about.html" class="header-menu__link">О нас</a></li>
                      <li class="header-menu__item"><a href="" class="header-menu__link">Книги</a></li>
-                     <li class="header-menu__item"><a href="" class="header-menu__link">Акции</a></li>
-                     <li class="header-menu__item"><a href="" class="header-menu__link">Оплата и доставка</a></li>
-                     <li class="header-menu__item"><a href="" class="header-menu__link">Блог</a></li>
-                     <li class="header-menu__item"><a href="" class="header-menu__link">Контакты</a></li>
+                     <li class="header-menu__item"><a href="stocks.html" class="header-menu__link">Акции</a></li>
+                     <li class="header-menu__item"><a href="delivery.html" class="header-menu__link">Оплата и
+                           доставка</a></li>
+                     <li class="header-menu__item"><a href="blog.html" class="header-menu__link">Блог</a></li>
+                     <li class="header-menu__item"><a href="#footer" class="header-menu__link goto">Контакты</a></li>
                   </ul>
                </nav>
                <div class="header-middle__phone phone" data-da="sitebar, last, 1200">
@@ -88,9 +96,9 @@
             <div class="header-bottom">
                <h3 class="header-bottom__heading">Лучшие книги здесь!</h3>
 
-               <div data-da="page-home-scroll, last,1200" class="header-bottom__search search">
-                  <form action="" class="search__form">
-                     <div class="search__form-input">
+               <div data-da="page-scroll, last,1200" class="header-bottom__search search">
+                  <form action="" class="search__form header-search__form">
+                     <div class="search__form-input header-search__form-input">
                         <input autocomplete="off" type="text" name="form[]" data-value="" class="input" />
                      </div>
                      <div class="search__form-bottom">
@@ -100,11 +108,11 @@
                </div>
 
                <div class="header-bottom__personal" data-da="header-middle, last, 1200">
-                  <a href="" class="header-bottom__favorite">
+                  <a href="private.html" class="header-bottom__favorite">
                      <span class="header-bottom__favorite-quant">2</span>
                      <span class="header-bottom__favorite-text">Желаемые</span>
                   </a>
-                  <a href="" class="header-bottom__cart">
+                  <a href="cart.html" class="header-bottom__cart">
                      <span class="header-bottom__cart-quant">10</span>
                      <span class="header-bottom__cart-text">Корзина</span>
                   </a>
@@ -112,7 +120,9 @@
             </div>
          </div>
       </div>
+
    </div>
+   <div class="page-scroll"></div>
 </header>
 
 			<div class="intro">
@@ -120,7 +130,7 @@
       <div class='intro-row'>
          <div class="intro-col__left">
 
-            <div data-da="page-home-scroll,1,1200" class="intro__sitebar sitebar spollers">
+            <div data-da="page-scroll,1,1200" class="intro__sitebar sitebar spollers">
                <div class="sitebar__item">
                   <div class="sitebar__item-title spoller closeall active">Печатные</div>
                   <ul class="sitebar__item-list">
@@ -172,7 +182,7 @@
                            <a href="" class="main-slider__item-btn btn btn__red">Перейти</a>
                         </div>
                         <div class="main-slider__item-bg ibg">
-                           <img src="img/slider-bg.png" alt="" />
+                           <img src="img/slider-bg.jpg" alt="" />
                         </div>
                      </div>
                      <div class="main-slider__item">
@@ -186,7 +196,7 @@
                            <a href="" class="main-slider__item-btn btn btn__red">Перейти</a>
                         </div>
                         <div class="main-slider__item-bg ibg">
-                           <img src="img/slider-bg.png" alt="" />
+                           <img src="img/slider-bg.jpg" alt="" />
                         </div>
                      </div>
                      <div class="main-slider__item">
@@ -200,7 +210,7 @@
                            <a href="" class="main-slider__item-btn btn btn__red">Перейти</a>
                         </div>
                         <div class="main-slider__item-bg ibg">
-                           <img src="img/slider-bg.png" alt="" />
+                           <img src="img/slider-bg.jpg" alt="" />
                         </div>
                      </div>
                   </div>
@@ -211,6 +221,7 @@
                </div>
 
                <div class="intro-main__info info">
+
                   <div class="info__item">
                      <div class="info__item-icon">
                         <img src="img/calendar.svg" alt="" />
@@ -219,6 +230,10 @@
                         <div class="info__item-heading">График работы</div>
                         <div class="info__item-text">Работаем 7 дней в неделю <br> с 9:00 до 21:00</div>
                      </div>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
                   </div>
                   <div class="info__item">
                      <div class="info__item-icon">
@@ -228,6 +243,10 @@
                         <div class="info__item-heading">Бесплатная доставка</div>
                         <div class="info__item-text">При заказе от 800 грн</div>
                      </div>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
                   </div>
                   <div class="info__item">
                      <div class="info__item-icon">
@@ -237,6 +256,10 @@
                         <div class="info__item-heading">Большой ассортимент</div>
                         <div class="info__item-text">Около 100 000 книг</div>
                      </div>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
                   </div>
                   <div class="info__item">
                      <div class="info__item-icon">
@@ -246,6 +269,10 @@
                         <div class="info__item-heading">Акции и скидки</div>
                         <div class="info__item-text">Постоянные акции и скидки</div>
                      </div>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
                   </div>
                </div>
             </div>
@@ -273,7 +300,7 @@
       </div>
 
       <div class="section-catalog__box catalog-box">
-         <div class="catalog-box__main active">
+         <div class="catalog-box__main catalog-box__main-tab active">
             <div class="catalog-cards">
 
                <div class="catalog-cards-item item-cards">
@@ -297,7 +324,7 @@
                   </div>
 
                   <div class="item-cards__img">
-                     <a href="#" class="item-cards__link">
+                     <a href="product-card.html" class="item-cards__link">
                         <img src="img/cards-book/cards-book-01.jpg" alt="" />
                      </a>
                   </div>
@@ -639,14 +666,435 @@
 
             </div>
 
-            <div class="catalog-box__pagin">
-               <a href="" class="catalog-pagin"><span></span>Загрузить еще</a>
+            <div class="btn-box">
+               <a href="" class="btn__pagin"><span></span>Загрузить еще</a>
             </div>
          </div>
 
-         <div class="catalog-box__main">2</div>
+         <div class="catalog-box__main catalog-box__main-tab">
+            <div class="catalog-cards">
+               <div class="catalog-cards-item item-cards">
+                  <div class="item-cards__block">
+                     <div class="item-cards__reting reting">
+                        <div class="rating edit">
+                           <div class="rating__line"></div>
+                           <div class="rating__activeline"></div>
+                           <input value="3" type="hidden" name="rating" />
+                           <div class="stars">
+                              <span class="star"></span>
+                              <span class="star"></span>
+                              <span class="star"></span>
+                              <span class="star"></span>
+                              <span class="star"></span>
+                           </div>
+                        </div>
+                     </div>
+
+                     <span class="item-cards__favotite"></span>
+                  </div>
+
+                  <div class="item-cards__img">
+                     <a href="product-card.html" class="item-cards__link">
+                        <img src="img/cards-book/cards-book-01.jpg" alt="" />
+                     </a>
+                  </div>
+
+                  <h4>
+                     <a href="#" class="item-cards__name">Длинное такое название этой представленной книги</a>
+                  </h4>
+
+                  <div class="item-cards__block item-cards__block-price">
+                     <span class="item-cards__price">120 грн</span>
+                     <span class="item-cards__avtor">Авторское имя</span>
+                  </div>
+
+                  <div class="item-cards__block item-cards__block-btn">
+                     <a href="#" class="item-cards__btn-click btn">Купить в один клик</a>
+                     <a href="#" class="item-cards__btn btn">Купить</a>
+                  </div>
+               </div>
+               <div class="catalog-cards-item item-cards">
+                  <div class="item-cards__block">
+                     <div class="item-cards__reting reting">
+                        <div class="rating edit">
+                           <div class="rating__line"></div>
+                           <div class="rating__activeline"></div>
+                           <input value="3" type="hidden" name="rating" />
+                           <div class="stars">
+                              <span class="star"></span>
+                              <span class="star"></span>
+                              <span class="star"></span>
+                              <span class="star"></span>
+                              <span class="star"></span>
+                           </div>
+                        </div>
+                     </div>
+
+                     <span class="item-cards__favotite"></span>
+                  </div>
+
+                  <div class="item-cards__img">
+                     <a href="#" class="item-cards__link">
+                        <img src="img/cards-book/cards-book-02.jpg" alt="" />
+                     </a>
+                  </div>
+
+                  <h4>
+                     <a href="#" class="item-cards__name">Длинное такое название этой представленной книги</a>
+                  </h4>
+
+                  <div class="item-cards__block item-cards__block-price">
+                     <span class="item-cards__price">120 грн</span>
+                     <span class="item-cards__avtor">Авторское имя</span>
+                  </div>
+
+                  <div class="item-cards__block item-cards__block-btn">
+                     <a href="#" class="item-cards__btn-click btn">Купить в один клик</a>
+                     <a href="#" class="item-cards__btn btn">Купить</a>
+                  </div>
+               </div>
+               <div class="catalog-cards-item item-cards">
+                  <div class="item-cards__block">
+                     <div class="item-cards__reting reting">
+                        <div class="rating edit">
+                           <div class="rating__line"></div>
+                           <div class="rating__activeline"></div>
+                           <input value="3" type="hidden" name="rating" />
+                           <div class="stars">
+                              <span class="star"></span>
+                              <span class="star"></span>
+                              <span class="star"></span>
+                              <span class="star"></span>
+                              <span class="star"></span>
+                           </div>
+                        </div>
+                     </div>
+
+                     <span class="item-cards__favotite"></span>
+                  </div>
+
+                  <div class="item-cards__img">
+                     <a href="#" class="item-cards__link">
+                        <img src="img/cards-book/cards-book-03.jpg" alt="" />
+                     </a>
+                  </div>
+
+                  <h4>
+                     <a href="#" class="item-cards__name">Длинное такое название этой представленной книги</a>
+                  </h4>
+
+                  <div class="item-cards__block item-cards__block-price">
+                     <span class="item-cards__price">120 грн</span>
+                     <span class="item-cards__avtor">Авторское имя</span>
+                  </div>
+
+                  <div class="item-cards__block item-cards__block-btn">
+                     <a href="#" class="item-cards__btn-click btn">Купить в один клик</a>
+                     <a href="#" class="item-cards__btn btn">Купить</a>
+                  </div>
+               </div>
+               <div class="catalog-cards-item item-cards">
+                  <div class="item-cards__block">
+                     <div class="item-cards__reting reting">
+                        <div class="rating edit">
+                           <div class="rating__line"></div>
+                           <div class="rating__activeline"></div>
+                           <input value="3" type="hidden" name="rating" />
+                           <div class="stars">
+                              <span class="star"></span>
+                              <span class="star"></span>
+                              <span class="star"></span>
+                              <span class="star"></span>
+                              <span class="star"></span>
+                           </div>
+                        </div>
+                     </div>
+
+                     <span class="item-cards__favotite"></span>
+                  </div>
+
+                  <div class="item-cards__img">
+                     <a href="#" class="item-cards__link">
+                        <img src="img/cards-book/cards-book-04.jpg" alt="" />
+                     </a>
+                  </div>
+
+                  <h4>
+                     <a href="#" class="item-cards__name">Длинное такое название этой представленной книги</a>
+                  </h4>
+
+                  <div class="item-cards__block item-cards__block-price">
+                     <span class="item-cards__price">120 грн</span>
+                     <span class="item-cards__avtor">Авторское имя</span>
+                  </div>
+
+                  <div class="item-cards__block item-cards__block-btn">
+                     <a href="#" class="item-cards__btn-click btn">Купить в один клик</a>
+                     <a href="#" class="item-cards__btn btn">Купить</a>
+                  </div>
+               </div>
+            </div>
+            <div class="btn-box">
+               <a href="" class="btn__pagin"><span></span>Загрузить еще</a>
+            </div>
+         </div>
 
 
+         <div class="catalog-box__main catalog-box__main-tab">
+            <div class="catalog-cards">
+               <div class="catalog-cards-item item-cards">
+                  <div class="item-cards__block">
+                     <div class="item-cards__reting reting">
+                        <div class="rating edit">
+                           <div class="rating__line"></div>
+                           <div class="rating__activeline"></div>
+                           <input value="3" type="hidden" name="rating" />
+                           <div class="stars">
+                              <span class="star"></span>
+                              <span class="star"></span>
+                              <span class="star"></span>
+                              <span class="star"></span>
+                              <span class="star"></span>
+                           </div>
+                        </div>
+                     </div>
+
+                     <span class="item-cards__favotite"></span>
+                  </div>
+
+                  <div class="item-cards__img">
+                     <a href="product-card.html" class="item-cards__link">
+                        <img src="img/cards-book/cards-book-01.jpg" alt="" />
+                     </a>
+                  </div>
+
+                  <h4>
+                     <a href="#" class="item-cards__name">Длинное такое название этой представленной книги</a>
+                  </h4>
+
+                  <div class="item-cards__block item-cards__block-price">
+                     <span class="item-cards__price">120 грн</span>
+                     <span class="item-cards__avtor">Авторское имя</span>
+                  </div>
+
+                  <div class="item-cards__block item-cards__block-btn">
+                     <a href="#" class="item-cards__btn-click btn">Купить в один клик</a>
+                     <a href="#" class="item-cards__btn btn">Купить</a>
+                  </div>
+               </div>
+               <div class="catalog-cards-item item-cards">
+                  <div class="item-cards__block">
+                     <div class="item-cards__reting reting">
+                        <div class="rating edit">
+                           <div class="rating__line"></div>
+                           <div class="rating__activeline"></div>
+                           <input value="3" type="hidden" name="rating" />
+                           <div class="stars">
+                              <span class="star"></span>
+                              <span class="star"></span>
+                              <span class="star"></span>
+                              <span class="star"></span>
+                              <span class="star"></span>
+                           </div>
+                        </div>
+                     </div>
+
+                     <span class="item-cards__favotite"></span>
+                  </div>
+
+                  <div class="item-cards__img">
+                     <a href="#" class="item-cards__link">
+                        <img src="img/cards-book/cards-book-02.jpg" alt="" />
+                     </a>
+                  </div>
+
+                  <h4>
+                     <a href="#" class="item-cards__name">Длинное такое название этой представленной книги</a>
+                  </h4>
+
+                  <div class="item-cards__block item-cards__block-price">
+                     <span class="item-cards__price">120 грн</span>
+                     <span class="item-cards__avtor">Авторское имя</span>
+                  </div>
+
+                  <div class="item-cards__block item-cards__block-btn">
+                     <a href="#" class="item-cards__btn-click btn">Купить в один клик</a>
+                     <a href="#" class="item-cards__btn btn">Купить</a>
+                  </div>
+               </div>
+               <div class="catalog-cards-item item-cards">
+                  <div class="item-cards__block">
+                     <div class="item-cards__reting reting">
+                        <div class="rating edit">
+                           <div class="rating__line"></div>
+                           <div class="rating__activeline"></div>
+                           <input value="3" type="hidden" name="rating" />
+                           <div class="stars">
+                              <span class="star"></span>
+                              <span class="star"></span>
+                              <span class="star"></span>
+                              <span class="star"></span>
+                              <span class="star"></span>
+                           </div>
+                        </div>
+                     </div>
+
+                     <span class="item-cards__favotite"></span>
+                  </div>
+
+                  <div class="item-cards__img">
+                     <a href="#" class="item-cards__link">
+                        <img src="img/cards-book/cards-book-03.jpg" alt="" />
+                     </a>
+                  </div>
+
+                  <h4>
+                     <a href="#" class="item-cards__name">Длинное такое название этой представленной книги</a>
+                  </h4>
+
+                  <div class="item-cards__block item-cards__block-price">
+                     <span class="item-cards__price">120 грн</span>
+                     <span class="item-cards__avtor">Авторское имя</span>
+                  </div>
+
+                  <div class="item-cards__block item-cards__block-btn">
+                     <a href="#" class="item-cards__btn-click btn">Купить в один клик</a>
+                     <a href="#" class="item-cards__btn btn">Купить</a>
+                  </div>
+               </div>
+               <div class="catalog-cards-item item-cards">
+                  <div class="item-cards__block">
+                     <div class="item-cards__reting reting">
+                        <div class="rating edit">
+                           <div class="rating__line"></div>
+                           <div class="rating__activeline"></div>
+                           <input value="3" type="hidden" name="rating" />
+                           <div class="stars">
+                              <span class="star"></span>
+                              <span class="star"></span>
+                              <span class="star"></span>
+                              <span class="star"></span>
+                              <span class="star"></span>
+                           </div>
+                        </div>
+                     </div>
+
+                     <span class="item-cards__favotite"></span>
+                  </div>
+
+                  <div class="item-cards__img">
+                     <a href="#" class="item-cards__link">
+                        <img src="img/cards-book/cards-book-04.jpg" alt="" />
+                     </a>
+                  </div>
+
+                  <h4>
+                     <a href="#" class="item-cards__name">Длинное такое название этой представленной книги</a>
+                  </h4>
+
+                  <div class="item-cards__block item-cards__block-price">
+                     <span class="item-cards__price">120 грн</span>
+                     <span class="item-cards__avtor">Авторское имя</span>
+                  </div>
+
+                  <div class="item-cards__block item-cards__block-btn">
+                     <a href="#" class="item-cards__btn-click btn">Купить в один клик</a>
+                     <a href="#" class="item-cards__btn btn">Купить</a>
+                  </div>
+               </div>
+            </div>
+            <div class="btn-box">
+               <a href="" class="btn__pagin"><span></span>Загрузить еще</a>
+            </div>
+         </div>
+
+         <div class="catalog-box__main catalog-box__main-tab">
+            <div class="catalog-cards">
+               <div class="catalog-cards-item item-cards">
+                  <div class="item-cards__block">
+                     <div class="item-cards__reting reting">
+                        <div class="rating edit">
+                           <div class="rating__line"></div>
+                           <div class="rating__activeline"></div>
+                           <input value="3" type="hidden" name="rating" />
+                           <div class="stars">
+                              <span class="star"></span>
+                              <span class="star"></span>
+                              <span class="star"></span>
+                              <span class="star"></span>
+                              <span class="star"></span>
+                           </div>
+                        </div>
+                     </div>
+
+                     <span class="item-cards__favotite"></span>
+                  </div>
+
+                  <div class="item-cards__img">
+                     <a href="product-card.html" class="item-cards__link">
+                        <img src="img/cards-book/cards-book-01.jpg" alt="" />
+                     </a>
+                  </div>
+
+                  <h4>
+                     <a href="#" class="item-cards__name">Длинное такое название этой представленной книги</a>
+                  </h4>
+
+                  <div class="item-cards__block item-cards__block-price">
+                     <span class="item-cards__price">120 грн</span>
+                     <span class="item-cards__avtor">Авторское имя</span>
+                  </div>
+
+                  <div class="item-cards__block item-cards__block-btn">
+                     <a href="#" class="item-cards__btn-click btn">Купить в один клик</a>
+                     <a href="#" class="item-cards__btn btn">Купить</a>
+                  </div>
+               </div>
+               <div class="catalog-cards-item item-cards">
+                  <div class="item-cards__block">
+                     <div class="item-cards__reting reting">
+                        <div class="rating edit">
+                           <div class="rating__line"></div>
+                           <div class="rating__activeline"></div>
+                           <input value="3" type="hidden" name="rating" />
+                           <div class="stars">
+                              <span class="star"></span>
+                              <span class="star"></span>
+                              <span class="star"></span>
+                              <span class="star"></span>
+                              <span class="star"></span>
+                           </div>
+                        </div>
+                     </div>
+
+                     <span class="item-cards__favotite"></span>
+                  </div>
+
+                  <div class="item-cards__img">
+                     <a href="#" class="item-cards__link">
+                        <img src="img/cards-book/cards-book-02.jpg" alt="" />
+                     </a>
+                  </div>
+
+                  <h4>
+                     <a href="#" class="item-cards__name">Длинное такое название этой представленной книги</a>
+                  </h4>
+
+                  <div class="item-cards__block item-cards__block-price">
+                     <span class="item-cards__price">120 грн</span>
+                     <span class="item-cards__avtor">Авторское имя</span>
+                  </div>
+
+                  <div class="item-cards__block item-cards__block-btn">
+                     <a href="#" class="item-cards__btn-click btn">Купить в один клик</a>
+                     <a href="#" class="item-cards__btn btn">Купить</a>
+                  </div>
+               </div>
+            </div>
+            <div class="btn-box">
+               <a href="" class="btn__pagin"><span></span>Загрузить еще</a>
+            </div>
+         </div>
 
          <div class="catalog-box__right right-box">
             <div class="right-box__banner">
@@ -733,7 +1181,7 @@
                <div class="present__heading">Узнавайте о скидках и новостях первыми!</div>
 
                <p class="present__text">
-                  <a href="" class="present__login">Зарегистрируйтесь</a> или подпишитесь на e-mail рассылку
+                  <a href="#login" class="present__login pl">Зарегистрируйтесь</a> или подпишитесь на e-mail рассылку
                   <span class="present__text-acent">и получите книгу</span>
                   <span class="present__text-big">в подарок</span>
                </p>
@@ -927,7 +1375,6 @@
    </div>
 </section>
 
-				
 			</div>
 
 			<footer class="footer">
@@ -1004,7 +1451,7 @@
 							class="input email req" />
 					</div>
 					<div class="form-input popup-login__input">
-						<input autocomplete="off" type="text" name="form[]" data-value="Ваш пароль" class="input" />
+						<input autocomplete="off" type="password" name="form[]" data-value="Ваш пароль" class="input req" />
 					</div>
 
 
@@ -1109,7 +1556,6 @@
 		<div class="cell">
 			<div class="popup-content popup-fillform__content">
 				<div class="popup-close"></div>
-
 				<form action="#" class="popup-form form popup-order__form">
 					<div class="popup__title popup-order__title">Заказать</div>
 					<p class="popup__text   popup-order__text">желаемую книгу</p>
@@ -1128,6 +1574,64 @@
 						<input autocomplete="off" type="text" name="form[]" data-value="Оставьте комментарий"
 							class="input req" />
 					</div>
+					<div class="form-button popup-fillform__button">
+						<button type="submit" class="form__btn btn btn__red">Отправить</button>
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup popup-checkout">
+	<div class="popup-table table">
+		<div class="cell">
+			<div class="popup-content popup-checkout__content">
+				<div class="popup-close"></div>
+				<form action="#" class="popup-form form popup-checkout__form">
+					<div class="popup__title popup-checkout__title">Оформление заказа</div>
+
+					<div class="form-input popup-checkout__input">
+						<input autocomplete="off" type="text" name="form[]" data-value="Фамилия и имя получателя"
+							class="input req" />
+					</div>
+					<div class="form-input popup-checkout__input">
+						<input autocomplete="off" type="tel" name="form[]" data-value="Контактный телефон"
+							class="input req" />
+					</div>
+					<div class="form-input popup-checkout__input mb">
+						<input autocomplete="off" type="email" name="form[]" data-value="Электронная почта"
+							class="input email req" />
+					</div>
+
+					<select name="form[]" class="checkout-select">
+						<option value="1" selected="selected">Выберите город</option>
+						<option value="2">Киев</option>
+						<option value="3">Одесса</option>
+						<option value="4">Харьков</option>
+						<option value="4">Львов</option>
+					</select>
+					<select name="form[]" class="checkout-select">
+						<option value="1" selected="selected">Способ доставки</option>
+						<option value="2">Новая почта</option>
+						<option value="3">Экспресс</option>
+						<option value="4">УкрПочта</option>
+					</select>
+					<select name="form[]" class="checkout-select">
+						<option value="1" selected="selected">Номер отделения</option>
+						<option value="2">3</option>
+						<option value="3">5</option>
+						<option value="4">6</option>
+						<option value="4">8</option>
+					</select>
+					<select name="form[]" class="checkout-select">
+						<option value="1" selected="selected">Способ оплаты</option>
+						<option value="2">Курьеру</option>
+						<option value="3">Карта банка</option>
+						<option value="4">Безнал</option>
+						<option value="4">Наложенный платеж</option>
+					</select>
+
 					<div class="form-button popup-fillform__button">
 						<button type="submit" class="form__btn btn btn__red">Отправить</button>
 					</div>

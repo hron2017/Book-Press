@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <title>Корзина</title>
+   <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+   <meta name="format-detection" content="telephone=no">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <link rel="stylesheet" href="css/style.css">
+
+   <link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+   <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
+   <meta name="msapplication-TileColor" content="#da532c">
+   <meta name="theme-color" content="#ffffff">
+
+   <script src="https://kit.fontawesome.com/e7a39f0f13.js" crossorigin="anonymous"></script>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="page page-card">
+         <header class="header">
+   <div class='container'>
+      <div class="header-row">
+         <div class="header-col header-col__left">
+            <a href="index.html" class="header__logo logo">
+               <img src="img/logo.png" alt="" />
+            </a>
+         </div>
+         <div class="header-menu__icon" data-da="page-scroll, 1,1200">
+            <span></span>
+            <span></span>
+            <span></span>
+         </div>
+         <div class="header-col header-col__right">
+            <div class="header-middle">
+               <span class="header-middle__text">Online магазин<br>бизнес литературы</span>
+               <nav class="header-middle__menu header-menu" data-da="sitebar, first, 700">
+                  <ul class="header-menu__list">
+                     <li class="header-menu__item"><a href="about.html" class="header-menu__link">О нас</a></li>
+                     <li class="header-menu__item"><a href="" class="header-menu__link">Книги</a></li>
+                     <li class="header-menu__item"><a href="stocks.html" class="header-menu__link">Акции</a></li>
+                     <li class="header-menu__item"><a href="delivery.html" class="header-menu__link">Оплата и
+                           доставка</a></li>
+                     <li class="header-menu__item"><a href="blog.html" class="header-menu__link">Блог</a></li>
+                     <li class="header-menu__item"><a href="#footer" class="header-menu__link goto">Контакты</a></li>
+                  </ul>
+               </nav>
+               <div class="header-middle__phone phone" data-da="sitebar, last, 1200">
+                  <a href="tel:+380953745541" class="phone__link">+38 (095) 374 55 41</a>
+                  <a href="tel:+380953745541" class="phone__link">+38 (095) 374 55 41</a>
+               </div>
+
+               <a href="#login" class="header-middle__login pl" data-da="sitebar, 4, 1200">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                     x="0px" y="0px" viewBox="0 0 486 483.1" style="enable-background:new 0 0 486 483.1;"
+                     xml:space="preserve">
+                     <style type="text/css">
+                        .st0 {
+                           fill: none;
+                           stroke: #B81D24;
+                           stroke-width: 24;
+                           stroke-miterlimit: 10;
+                        }
+
+                        .st1 {
+                           fill: #B81D24;
+                           stroke: #B81D24;
+                           stroke-width: 25;
+                           stroke-miterlimit: 10;
+                        }
+
+                        .st2 {
+                           fill: #B81D24;
+                        }
+                     </style>
+                     <g>
+                        <g>
+                           <g id="account-box_1_">
+                              <path class="st0" d="M14,64.7v357c0,28,23,51,51,51h357c28,0,51-23,51-51v-357c0-28-23-51-51-51H65C37,13.7,14,36.6,14,64.7z
+                        M320,166.7c0,43.4-33.1,76.5-76.5,76.5S167,210,167,166.7s33.1-76.5,76.5-76.5S320,123.3,320,166.7z M90.5,370.7
+                       c0-51,102-79,153-79s153,28,153,79v25.5h-306V370.7z" />
+                           </g>
+                        </g>
+                     </g>
+                     <circle class="st1" cx="243.9" cy="164.9" r="75.5" />
+                     <path class="st2" d="M90.5,348.5L192,293.8l67-1.5l80.4,23.8l44.1,32.4l13,26.8v18.4c0,0-168.7,8.4-171,8.4s-135,0-135,0l-3.4-31.8
+              L90.5,348.5z" />
+                  </svg>
+               </a>
+            </div>
+
+            <div class="header-bottom">
+               <h3 class="header-bottom__heading">Лучшие книги здесь!</h3>
+
+               <div data-da="page-scroll, last,1200" class="header-bottom__search search">
+                  <form action="" class="search__form header-search__form">
+                     <div class="search__form-input header-search__form-input">
+                        <input autocomplete="off" type="text" name="form[]" data-value="" class="input" />
+                     </div>
+                     <div class="search__form-bottom">
+                        <button type="submit" class="search__form-btn btn">Поиск</button>
+                     </div>
+                  </form>
+               </div>
+
+               <div class="header-bottom__personal" data-da="header-middle, last, 1200">
+                  <a href="private.html" class="header-bottom__favorite">
+                     <span class="header-bottom__favorite-quant">2</span>
+                     <span class="header-bottom__favorite-text">Желаемые</span>
+                  </a>
+                  <a href="cart.html" class="header-bottom__cart">
+                     <span class="header-bottom__cart-quant">10</span>
+                     <span class="header-bottom__cart-text">Корзина</span>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+
+   </div>
+   <div class="page-scroll"></div>
+</header>
+
+         <div data-da="page-scroll,1,1200" class="intro__sitebar sitebar spollers">
+   <div class="sitebar__item">
+      <div class="sitebar__item-title spoller closeall active">Печатные</div>
+      <ul class="sitebar__item-list">
+         <li><a href="" class="sitebar__item-link">Фининсы</a></li>
+         <li><a href="" class="sitebar__item-link">Истории успеха</a></li>
+         <li><a href="" class="sitebar__item-link">Психология</a></li>
+         <li><a href="" class="sitebar__item-link">Менеджмент</a></li>
+         <li><a href="" class="sitebar__item-link">Маркетинг</a></li>
+         <li><a href="" class="sitebar__item-link">Экономика</a></li>
+         <li><a href="" class="sitebar__item-link">Продуктивность</a></li>
+         <li><a href="" class="sitebar__item-link">Лидество</a></li>
+         <li><a href="" class="sitebar__item-link">Инвнстирование</a></li>
+         <li><a href="" class="sitebar__item-link">Управление</a></li>
+      </ul>
+   </div>
+   <div class="sitebar__item">
+      <div class="sitebar__item-title spoller closeall">Электронные</div>
+      <ul class="sitebar__item-list">
+         <li><a href="" class="sitebar__item-link">Фининсы</a></li>
+         <li><a href="" class="sitebar__item-link">Истории успеха</a></li>
+         <li><a href="" class="sitebar__item-link">Психология</a></li>
+      </ul>
+   </div>
+   <div class="sitebar__item">
+      <div class="sitebar__item-title spoller closeall">Аудио</div>
+      <ul class="sitebar__item-list">
+         <li><a href="" class="sitebar__item-link">Продуктивность</a></li>
+         <li><a href="" class="sitebar__item-link">Лидество</a></li>
+         <li><a href="" class="sitebar__item-link">Инвнстирование</a></li>
+         <li><a href="" class="sitebar__item-link">Управление</a></li>
+      </ul>
+   </div>
+</div>
+
+         <div class="main main-card card">
+
+            <div class='container'>
+               <div class="breadcrumbs">
+                  <ul class="breadcrumbs__list">
+                     <li class="breadcrumbs__item">
+                        <a href="" class="breadcrumbs__link">Главная</a>
+                     </li>
+                     <li class="breadcrumbs__item">
+                        <a href="" class="breadcrumbs__link">Корзина</a>
+                     </li>
+                  </ul>
+               </div>
+
+               <h2 class="card-heading">ваша корзина</h2>
+
+               <div class="card-table">
+                  <div class="card-table-heading table-heading">
+                     <div class="table-heading__item fb50">Товар</div>
+                     <div class="table-heading__item">Цена</div>
+                     <div class="table-heading__item">Количество</div>
+                     <div class="table-heading__item">Всего</div>
+                  </div>
+
+                  <div class="card-table-item  order-count">
+                     <div class="card-table-content table-content">
+                        <div class="table-content__item">
+                           <div class="table-content__item-col table-col table-col-2">
+                              <div class="table-col__icons">
+                                 <span class="card-table__icon"></span>
+                                 <span class="item-cards__favotite card-table__favotite"></span>
+                              </div>
+                              <div class="table-col__img">
+                                 <img src="img/cards-book/cards-book-01.jpg" alt="" />
+                              </div>
+                           </div>
+                        </div>
+                        <div class="table-content__item">
+                           <div class="table-content__item-col table-col">
+                              <h3 class="table-col__name">
+                                 длинное такое название этой представленной книги
+                                 <span>Авторское имя</span>
+                              </h3>
+                           </div>
+                        </div>
+                        <div class="table-content__item">
+                           <div class="table-content__item-col table-col">
+                              <div class="table-col__price item-cards__price">120грн</div>
+                           </div>
+                        </div>
+                        <div class="table-content__item">
+                           <div class="table-content__item-col table-col">
+                              <div class="item-cards__block item-personal__cards">
+                                 <div class="products-counts">
+                                    <span class="products-counts__icon products-counts__prev"></span>
+                                    <span class="products-counts__icon products-counts__count">1</span>
+                                    <span class="products-counts__icon products-counts__next"></span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="table-content__item">
+                           <div class="table-content__item-col table-col">
+                              <div class="table-col__total">
+                                 <span class="order-total">120грн</span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="card-table-item  order-count">
+                     <div class="card-table-content table-content">
+                        <div class="table-content__item">
+                           <div class="table-content__item-col table-col table-col-2">
+                              <div class="table-col__icons">
+                                 <span class="card-table__icon"></span>
+                                 <span class="item-cards__favotite card-table__favotite"></span>
+                              </div>
+                              <div class="table-col__img">
+                                 <img src="img/cards-book/cards-book-01.jpg" alt="" />
+                              </div>
+                           </div>
+                        </div>
+                        <div class="table-content__item">
+                           <div class="table-content__item-col table-col">
+                              <h3 class="table-col__name">
+                                 длинное такое название этой представленной книги
+                                 <span>Авторское имя</span>
+                              </h3>
+                           </div>
+                        </div>
+                        <div class="table-content__item">
+                           <div class="table-content__item-col table-col">
+                              <div class="table-col__price item-cards__price">120грн</div>
+                           </div>
+                        </div>
+                        <div class="table-content__item">
+                           <div class="table-content__item-col table-col">
+                              <div class="item-cards__block item-personal__cards">
+                                 <div class="products-counts">
+                                    <span class="products-counts__icon products-counts__prev"></span>
+                                    <span class="products-counts__icon products-counts__count">1</span>
+                                    <span class="products-counts__icon products-counts__next"></span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="table-content__item">
+                           <div class="table-content__item-col table-col">
+                              <div class="table-col__total">
+                                 <span class="order-total">120грн</span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+
+                  <div class="card-total__box">
+                     <div class="card-total">
+                        Итого к оплате: <span class="total-all">240</span><span>грн <p>+ Доставка</p></span>
+                     </div>
+                  </div>
+                  <div class="card-btn__box">
+                     <a href="#" class="item-cards__btn card-btn__click btn">Вернуться назад</a>
+                     <a href="#checkout" class="card-btn btn pl">Оформить заказ</a>
+                  </div>
+               </div>
+
+            </div>
+
+         </div>
+
+      </div>
+
+      <footer class="footer">
+	<div class='container'>
+
+
+		<div class="footer-body">
+
+			<div class="footer-col footer-col-left">
+				<nav class="footer-menu">
+					<ul class="footer-menu__list">
+						<li class="footer-menu__item"><a href="#" class="footer-menu__link active">О нас</a></li>
+						<li class="footer-menu__item"><a href="#" class="footer-menu__link">Книги</a></li>
+						<li class="footer-menu__item"><a href="#" class="footer-menu__link">Акции</a></li>
+						<li class="footer-menu__item"><a href="#" class="footer-menu__link">Оплата и доставка</a></li>
+						<li class="footer-menu__item"><a href="#" class="footer-menu__link">Блог</a></li>
+						<li class="footer-menu__item"><a href="#" class="footer-menu__link">Контакты</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="footer-col footer-col-center">
+				<div class="footer__logo">
+					<img src="img/logo.png" alt="" />
+				</div>
+				<p class="footer__text">Узнавайте о скидках и новостях первыми!</p>
+				<div class="footer__search search">
+					<form action="" class="search__form">
+						<div class="search__form-input">
+							<input autocomplete="off" type="text" name="form[]" data-value="Введите Ваш e-mail"
+								class="input" />
+						</div>
+						<div class="search__form-bottom">
+							<button type="submit" class="search__form-btn btn btn__red">Поиск</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="footer-col footer-col-right">
+				<div class="footer__contact">
+					<p>Наши контакты</p>
+					<div class="footer__contact-phone phone">
+						<a href="tel:+380953745541" class="phone__link">+38 (095) 374 55 41</a>
+						<a href="tel:+380953745541" class="phone__link">+38 (095) 374 55 41</a>
+					</div>
+					<a href="#fillform" class="footer__contact-email pl">Напишите нам</a>
+				</div>
+				<div class="footer__scl scl" data-da="footer-col-center, lasr, 767">
+					<ul class="scl-list">
+						<li class="scl-list__item"><a href="" class="scl-list__link"><i class="fab fa-facebook-f"></i></a>
+						</li>
+						<li class="scl-list__item"><a href="" class="scl-list__link"><i class="fab fa-twitter"></i></a></li>
+						<li class="scl-list__item"><a href="" class="scl-list__link"><i class="fab fa-instagram"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+<div id="up" class="up"></div>
+      <div class="popup popup-login">
+	<div class="popup-table table">
+		<div class="cell">
+			<div class="popup-content popup-login__content">
+				<div class="popup-image popup-login__image">
+					<img src="img/login-img.svg" alt="" />
+				</div>
+				<div class="popup-close"></div>
+				<div class="popup__title popup-login__title">войти</div>
+				<form action="#" class="popup-form form popup-login__form">
+					<div class="form-input popup-login__input">
+						<input autocomplete="off" type="email" name="form[]" data-value="Ваш телефон или e-mail"
+							class="input email req" />
+					</div>
+					<div class="form-input popup-login__input">
+						<input autocomplete="off" type="password" name="form[]" data-value="Ваш пароль" class="input req" />
+					</div>
+
+
+					<div class="popup-login__remember">
+						<input type="checkbox" class="popup-checkbox popup-login__checkbox" id="rememberMe">
+						<label for="rememberMe">Запомнить меня</label>
+
+						<a href="#" id="remindpass" class="popup-login__remindpass"><span>Напомнить пароль</span></a>
+					</div>
+
+					<div class="form-button popup-login__button">
+						<button type="submit" class="form__btn btn ">Войти</button>
+
+						<a href="#registr" class="btn btn__register registr-link pl">Зарегистрироваться</a>
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup popup-registr">
+	<div class="popup-table table">
+		<div class="cell">
+			<div class="popup-content popup-login__content">
+				<div class="popup-image popup-login__image">
+					<img src="img/login-img.svg" alt="" />
+				</div>
+				<div class="popup-close"></div>
+				<div class="popup__title popup-login__title">Регистрация</div>
+				<form action="#" class="popup-form form popup-login__form">
+
+					<div class="form-input popup-login__input">
+						<input autocomplete="off" type="text" name="form[]" data-value="Введите Ваше имя" class="input req" />
+					</div>
+					<div class="form-input popup-login__input">
+						<input autocomplete="off" type="email" name="form[]" data-value="Введите Ваш e-mail"
+							class="input email req" />
+					</div>
+					<div class="form-input popup-login__input">
+						<input autocomplete="off" type="tel" name="form[]" data-value="Введите телефон получателя"
+							class="input req" />
+					</div>
+					<div class="form-input popup-login__input">
+						<input autocomplete="off" type="text" name="form[]" data-value="Введите Ваш пароль"
+							class="input pass req" />
+					</div>
+					<div class="form-input popup-login__input">
+						<input autocomplete="off" type="text" name="form[]" data-value="Повторите Ваш пароль"
+							class="input pass req" />
+					</div>
+					<div class="popup-login__remember popup-registr__remember">
+						<input type="checkbox" class="popup-checkbox popup-registr__checkbox" id="agree">
+						<label for="agree">Соглашаюсь с <span> условиями использования</span> </label>
+					</div>
+
+					<div class="form-button popup-login__button">
+						<button type="submit" class="form__btn btn">Зарегистрироваться</button>
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="popup popup-fillform">
+	<div class="popup-table table">
+		<div class="cell">
+			<div class="popup-content popup-fillform__content">
+				<div class="popup-close"></div>
+
+				<form action="#" class="popup-form form popup-fillform__form">
+					<div class="popup__title popup-fillform__title">Заполните форму</div>
+					<div class="form-input popup-fillform__input">
+						<input autocomplete="off" type="email" name="form[]" data-value="Электронная почта"
+							class="input email req" />
+					</div>
+					<div class="form-input popup-fillform__input">
+						<input autocomplete="off" type="text" name="form[]" data-value="Ваше имя" class="input req" />
+					</div>
+					<div class="form-input popup-fillform__input">
+						<input autocomplete="off" type="text" name="form[]" data-value="Контактный телефон"
+							class="input req" />
+					</div>
+					<div class="form-input popup-fillform__input">
+						<input autocomplete="off" type="text" name="form[]" data-value="Оставьте комментарий"
+							class="input req" />
+					</div>
+					<div class="form-button popup-fillform__button">
+						<button type="submit" class="form__btn btn btn__red">Отправить</button>
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup popup-order">
+	<div class="popup-table table">
+		<div class="cell">
+			<div class="popup-content popup-fillform__content">
+				<div class="popup-close"></div>
+				<form action="#" class="popup-form form popup-order__form">
+					<div class="popup__title popup-order__title">Заказать</div>
+					<p class="popup__text   popup-order__text">желаемую книгу</p>
+					<div class="form-input popup-fillform__input">
+						<input autocomplete="off" type="email" name="form[]" data-value="Электронная почта"
+							class="input email req" />
+					</div>
+					<div class="form-input popup-fillform__input">
+						<input autocomplete="off" type="text" name="form[]" data-value="Ваше имя" class="input req" />
+					</div>
+					<div class="form-input popup-fillform__input">
+						<input autocomplete="off" type="text" name="form[]" data-value="Контактный телефон"
+							class="input req" />
+					</div>
+					<div class="form-input popup-fillform__input">
+						<input autocomplete="off" type="text" name="form[]" data-value="Оставьте комментарий"
+							class="input req" />
+					</div>
+					<div class="form-button popup-fillform__button">
+						<button type="submit" class="form__btn btn btn__red">Отправить</button>
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup popup-checkout">
+	<div class="popup-table table">
+		<div class="cell">
+			<div class="popup-content popup-checkout__content">
+				<div class="popup-close"></div>
+				<form action="#" class="popup-form form popup-checkout__form">
+					<div class="popup__title popup-checkout__title">Оформление заказа</div>
+
+					<div class="form-input popup-checkout__input">
+						<input autocomplete="off" type="text" name="form[]" data-value="Фамилия и имя получателя"
+							class="input req" />
+					</div>
+					<div class="form-input popup-checkout__input">
+						<input autocomplete="off" type="tel" name="form[]" data-value="Контактный телефон"
+							class="input req" />
+					</div>
+					<div class="form-input popup-checkout__input mb">
+						<input autocomplete="off" type="email" name="form[]" data-value="Электронная почта"
+							class="input email req" />
+					</div>
+
+					<select name="form[]" class="checkout-select">
+						<option value="1" selected="selected">Выберите город</option>
+						<option value="2">Киев</option>
+						<option value="3">Одесса</option>
+						<option value="4">Харьков</option>
+						<option value="4">Львов</option>
+					</select>
+					<select name="form[]" class="checkout-select">
+						<option value="1" selected="selected">Способ доставки</option>
+						<option value="2">Новая почта</option>
+						<option value="3">Экспресс</option>
+						<option value="4">УкрПочта</option>
+					</select>
+					<select name="form[]" class="checkout-select">
+						<option value="1" selected="selected">Номер отделения</option>
+						<option value="2">3</option>
+						<option value="3">5</option>
+						<option value="4">6</option>
+						<option value="4">8</option>
+					</select>
+					<select name="form[]" class="checkout-select">
+						<option value="1" selected="selected">Способ оплаты</option>
+						<option value="2">Курьеру</option>
+						<option value="3">Карта банка</option>
+						<option value="4">Безнал</option>
+						<option value="4">Наложенный платеж</option>
+					</select>
+
+					<div class="form-button popup-fillform__button">
+						<button type="submit" class="form__btn btn btn__red">Отправить</button>
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+</div>
+   </div>
+   </div>
+   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="js/vendors.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+</html>

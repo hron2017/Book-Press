@@ -13,7 +13,7 @@
 							class="input email req" />
 					</div>
 					<div class="form-input popup-login__input">
-						<input autocomplete="off" type="text" name="form[]" data-value="Ваш пароль" class="input" />
+						<input autocomplete="off" type="password" name="form[]" data-value="Ваш пароль" class="input req" />
 					</div>
 
 
@@ -118,7 +118,6 @@
 		<div class="cell">
 			<div class="popup-content popup-fillform__content">
 				<div class="popup-close"></div>
-
 				<form action="#" class="popup-form form popup-order__form">
 					<div class="popup__title popup-order__title">Заказать</div>
 					<p class="popup__text   popup-order__text">желаемую книгу</p>
@@ -137,6 +136,64 @@
 						<input autocomplete="off" type="text" name="form[]" data-value="Оставьте комментарий"
 							class="input req" />
 					</div>
+					<div class="form-button popup-fillform__button">
+						<button type="submit" class="form__btn btn btn__red">Отправить</button>
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup popup-checkout">
+	<div class="popup-table table">
+		<div class="cell">
+			<div class="popup-content popup-checkout__content">
+				<div class="popup-close"></div>
+				<form action="#" class="popup-form form popup-checkout__form">
+					<div class="popup__title popup-checkout__title">Оформление заказа</div>
+
+					<div class="form-input popup-checkout__input">
+						<input autocomplete="off" type="text" name="form[]" data-value="Фамилия и имя получателя"
+							class="input req" />
+					</div>
+					<div class="form-input popup-checkout__input">
+						<input autocomplete="off" type="tel" name="form[]" data-value="Контактный телефон"
+							class="input req" />
+					</div>
+					<div class="form-input popup-checkout__input mb">
+						<input autocomplete="off" type="email" name="form[]" data-value="Электронная почта"
+							class="input email req" />
+					</div>
+
+					<select name="form[]" class="checkout-select">
+						<option value="1" selected="selected">Выберите город</option>
+						<option value="2">Киев</option>
+						<option value="3">Одесса</option>
+						<option value="4">Харьков</option>
+						<option value="4">Львов</option>
+					</select>
+					<select name="form[]" class="checkout-select">
+						<option value="1" selected="selected">Способ доставки</option>
+						<option value="2">Новая почта</option>
+						<option value="3">Экспресс</option>
+						<option value="4">УкрПочта</option>
+					</select>
+					<select name="form[]" class="checkout-select">
+						<option value="1" selected="selected">Номер отделения</option>
+						<option value="2">3</option>
+						<option value="3">5</option>
+						<option value="4">6</option>
+						<option value="4">8</option>
+					</select>
+					<select name="form[]" class="checkout-select">
+						<option value="1" selected="selected">Способ оплаты</option>
+						<option value="2">Курьеру</option>
+						<option value="3">Карта банка</option>
+						<option value="4">Безнал</option>
+						<option value="4">Наложенный платеж</option>
+					</select>
+
 					<div class="form-button popup-fillform__button">
 						<button type="submit" class="form__btn btn btn__red">Отправить</button>
 					</div>

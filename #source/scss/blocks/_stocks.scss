@@ -1,0 +1,38 @@
+.stocks {
+   .block-head__heading {
+      &:after {
+         content: '';
+         display: none;
+      }
+
+      @media (max-width:$md2+px) {
+         margin-top: 30px;
+      }
+
+      @media (min-width:$md2+px) {
+         margin-top: 90px;
+      }
+   }
+
+   .catalog-box__main {
+
+
+      @media (min-width:$md2+px) {
+         flex: 1;
+         max-width: 100%;
+      }
+   }
+
+   .item-cards {
+
+      @media (min-width:$md3+px) {
+         flex: 0 1 30%;
+         width: 30%;
+      }
+
+      @media (min-width:1200px) {
+         flex: 0 1 23%;
+         width: 23%;
+      }
+   }
+}

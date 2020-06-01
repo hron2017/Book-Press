@@ -1,0 +1,153 @@
+.delivery {
+   &__intro {
+      min-height: 218px;
+      background: url(../img/delivery/delivery-bg.png) 0 0 no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 93px;
+   }
+
+   &__heading {
+      color: #fefefe;
+      font-family: "Futura PT";
+      @include adaptiv-font(60, 32);
+      font-weight: 700;
+      line-height: 34px;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+   }
+}
+
+.block-row {
+   @media (min-width:$md3+px) {
+      display: flex;
+      justify-content: space-between;
+   }
+}
+
+.block-col {
+
+   @media (max-width:$md3+px) {
+      margin-bottom: 30px;
+   }
+
+   @media (min-width:$md3+px) {
+      flex: 0 1 50%;
+      display: flex;
+   }
+
+   &-mod {
+      align-items: center;
+   }
+}
+
+.block {
+
+   margin-bottom: 48px;
+
+   @media (max-width:$md3+px) {
+      text-align: center;
+   }
+
+   @media (min-width:$md2+px) {
+      margin-bottom: 88px;
+   }
+
+   &__head {
+      padding-bottom: 9px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid $acent;
+
+      @media (min-width:$md3+px) {
+         margin-bottom: 30px;
+      }
+   }
+
+   &__head-title {
+      color: #25262a;
+      font-family: "Futura PT";
+      @include adaptiv-font(30, 16);
+      font-weight: 900;
+      line-height: 34px;
+   }
+
+   &__brand {
+      @media (max-width:$md3+px) {
+         margin-bottom: 15px;
+      }
+
+      @media (min-width:$md3+px) {
+         margin-right: 35px;
+      }
+   }
+
+   &__item {
+      color: #25262a;
+      @include adaptiv-font(18, 12);
+      font-weight: 900;
+      line-height: 24px;
+
+      @media (min-width:$md2+px) {
+         line-height: 34px;
+      }
+
+      span {
+         color: #606060;
+         font-weight: 300;
+         display: inline-block;
+
+         @media (min-width:$md3+px) {
+            margin-left: 7px;
+         }
+      }
+   }
+
+   &__text {
+      color: #616161;
+      @include adaptiv-font(18, 12);
+      font-weight: 500;
+      line-height: 22px;
+      flex: 0 1 90%;
+
+      @media (min-width:$md3+px) {
+         padding-right: 40px;
+      }
+
+      strong {
+         display: block;
+         margin-bottom: 16px;
+      }
+   }
+
+   &__mod {
+      li {
+         position: relative;
+         padding-left: 30px;
+         margin-bottom: 18px;
+
+         &:after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 0;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: $acent;
+         }
+
+         @media (min-width:$md3+px) {
+            top: 50%;
+            transform: translateY(-50%);
+         }
+      }
+   }
+
+   &__icon {
+      @media (min-width:$md3+px) {
+         margin-right: 30px;
+      }
+   }
+}

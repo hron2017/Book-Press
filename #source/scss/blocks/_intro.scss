@@ -6,13 +6,20 @@
       margin-bottom: 94px;
       background: linear-gradient(to right, $darck 40%, #f7f7f7 40%);
    }
+
+   .sitebar {
+      @media (min-width:1200px) {
+         display: block;
+         visibility: visible;
+      }
+   }
 }
 
 .intro-row {
    display: flex;
 
    @media (max-width:1200px) {
-      margin-top: 70px;
+      margin-top: 25px;
    }
 }
 
@@ -110,6 +117,11 @@
       font-weight: normal;
       line-height: 48px;
       font-family: "Futura PT";
+      @include anim(0.3s, 0s);
+
+      &:hover {
+         color: $acent;
+      }
    }
 }
 
@@ -206,6 +218,12 @@
       position: relative;
    }
 
+   &__item-btn {
+      @media (min-width:$md4+px) and (max-width:$md2+px) {
+         height: 50px;
+      }
+   }
+
    &__control {
       position: absolute;
       bottom: 0;
@@ -263,7 +281,7 @@
 .info {
    display: flex;
    flex-wrap: wrap;
-
+   position: relative;
 
    @media (min-width:1200px) {
       margin-left: 23px;
@@ -284,8 +302,10 @@
       justify-content: center;
       flex: 1 1 100%;
       min-height: 130px;
-      border: 7px solid #fff;
+      //border: 7px solid #fff;
       margin-bottom: 23px;
+      box-shadow: inset 0 0 0 7px #fff;
+      position: relative;
 
       @media (min-width:600px) {
          flex: 1 1 50%;
@@ -297,6 +317,49 @@
 
          &:last-child {
             margin-bottom: 0;
+         }
+      }
+
+
+      span {
+         display: block;
+         background: $acent;
+         position: absolute;
+         margin: 0;
+         padding: 0;
+
+
+         &:nth-of-type(1) {
+            width: 0;
+            height: 7px;
+            top: 0;
+            left: 0;
+            animation: lineWidth 1.25s ease-in-out forwards 2s;
+
+         }
+
+         &:nth-of-type(2) {
+            width: 7px;
+            height: 0%;
+            top: 0;
+            right: 0;
+            animation: lineHeight 1.25s ease-in-out forwards 3s;
+         }
+
+         &:nth-of-type(3) {
+            width: 0%;
+            height: 7px;
+            bottom: 0;
+            right: 0;
+            animation: lineWidth 1.25s ease-in-out forwards 4s;
+         }
+
+         &:nth-of-type(4) {
+            width: 7px;
+            height: 0%;
+            bottom: 0;
+            left: 0;
+            animation: lineHeight 1.25s ease-in-out forwards 5s;
          }
       }
    }
@@ -315,6 +378,19 @@
       line-height: 22px;
    }
 }
+
+@keyframes lineWidth {
+   to {
+      width: 100%;
+   }
+}
+
+@keyframes lineHeight {
+   to {
+      height: 100%;
+   }
+}
+
 
 
 .bottom__line {
@@ -362,7 +438,7 @@
          flex: 1 1 auto;
       }
 
-      @media (max-width:$md4+px) {
+      @media (max-width:$md3+px) {
          &:nth-child(even) {
             &:after {
                display: none;
@@ -380,5 +456,63 @@
       a {
          color: #ffffff;
       }
+   }
+}
+
+
+.infoitem {
+   transition: color 0.25s;
+   position: relative;
+
+   &:before,
+   &:after {
+      content: '';
+      position: absolute;
+      box-sizing: inherit;
+   }
+
+   &:before,
+   &:after {
+      border: 7px solid transparent;
+      width: 0;
+      height: 0;
+   }
+
+   &:before {
+      top: 0;
+      left: 0;
+   }
+
+   &:after {
+      bottom: 0;
+      right: 0;
+   }
+
+   &:hover {
+      color: $acent;
+   }
+
+
+   &:hover:before,
+   &:hover:after {
+      width: 100%;
+      height: 100%;
+   }
+
+   &:hover:before {
+      border-top-color: $acent;
+      border-right-color: $acent;
+      transition:
+         width 0.25s ease-out,
+         height 0.25s ease-out 0.25s;
+   }
+
+   &:hover:after {
+      border-bottom-color: $acent;
+      border-left-color: $acent;
+      transition:
+         border-color 0s ease-out 0.5s,
+         width 0.25s ease-out 0.5s,
+         height 0.25s ease-out 0.75s;
    }
 }

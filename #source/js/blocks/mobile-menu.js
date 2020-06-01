@@ -2,8 +2,6 @@
 //====================  Mobile Menu ========================//
 $('.header-menu__icon').click(function (event) {
 	$(this).toggleClass('active');
-
-
 	$('.sitebar').toggleClass('active');
 });
 
@@ -33,8 +31,8 @@ function adaptive_header(w, h) {
 
 
 
-		if (!$('body').hasClass('done')) {
-			$('body').addClass('done').append($('<div class="page-home-scroll"></div>'));
+		if (!$('.header').hasClass('done')) {
+
 		}
 
 
@@ -43,9 +41,9 @@ function adaptive_header(w, h) {
 
 
 
-		if ($('body').hasClass('done')) {
-			$('body').removeClass('done');
-			$("div.page-home-scroll").remove();
+		if ($('.header').hasClass('done')) {
+			$('.header').removeClass('done');
+
 		}
 
 	}

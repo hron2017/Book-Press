@@ -6,10 +6,10 @@ $(window).scroll(function (event) {
 function sectors(scr) {
 	var w = $(window).outerWidth();
 	var h = $(window).outerHeight();
-	if (scr > 130) {
-		$('.middle').addClass('scroll');
+	if (scr > 80) {
+		$('.page-home-scroll').addClass('scroll');
 	} else {
-		$('.middle').removeClass('scroll');
+		$('.page-home-scroll').removeClass('scroll');
 	}
 }
 //====================  <!-- SCROLL --> ========================//
@@ -55,11 +55,19 @@ $('.goto').click(function () {
 });
 //====================  <!-- GoTO -->  ========================//
 //====================  Video  ========================//
-$('.video-play').click(function () {
-	$('#video').get(0).play();
+
+$('.about__video-play').click(function (e) {
+	$(this).parent().find('.about__video-poster').fadeOut();
+	$(this).parent().find('video').fadeIn().get(0).play();
+	$(this).parent().parent().find('.about__video-pause').css("opacity", ".5");
 	$(this).fadeOut();
-	$('.video__poster').fadeOut();
 });
+
+$('.about__video-pause').click(function () {
+	$(this).parent().find('video').get(0).pause();
+	$(this).parent().find('.about__video-poster, .about__video-play').fadeIn();
+	$(this).css("opacity", "0");
+})
 //====================  <!-- Video -->  ========================//
 //====================  Price-counter  ========================//
 const counters = document.querySelectorAll('.price-content__price-count');
@@ -80,7 +88,9 @@ counters.forEach(counter => {
 	updateCount();
 });
 //==================== <!-- Price-counter --> ========================//
-
+$('.header-middle__login').click(function () {
+	$('.sitebar, .header-menu__icon').removeClass("active");
+});
 
 $('.main-slider__body').slick({
 	infinite: false,
@@ -132,8 +142,49 @@ $('.footer-menu__link').click(function (e) {
 
 //==================== <-- Favorite --> ========================//
 
-$('.item-cards__favotite').click(function () {
+$('.item-cards__favotite, .card-item__favotite').click(function () {
 	$(this).toggleClass('item-cards__favorite-add');
 })
 
 //==================== <-- Favorite --> ========================//
+
+//==================== <-- Products-Counts --> ========================//
+
+$('.products-counts__prev').click(function () {
+	inc(this.parentNode, -1);
+	orderCount($(this));
+});
+$('.products-counts__next').click(function () {
+	inc(this.parentNode, 1);
+	orderCount($(this));
+});
+function inc(Obj, Val) {
+	Obj = $(Obj).closest('.item-personal__cards').find('.products-counts__count');
+	var val = parseInt(Obj.html());
+	if (val == 0 && Val == -1) {
+		return;
+	};
+	Obj.html(val + Val);
+};
+function orderCount(thin) {
+	let orderCount = thin.closest('.order-count').find('.products-counts__count').html();
+	let orderPrice = thin.closest('.order-count').find('.item-cards__price').html();
+	orderTotal = parseFloat(orderCount) * parseFloat(orderPrice);
+	thin.closest('.order-count').find('.order-total').html(orderTotal + 'грн');
+
+	$('.total-all').text(orderPriceTotal());
+}
+
+function orderPriceTotal() {
+	let orderTotal = $('.order-total');
+	let result = 0;
+	for (let i = 0; i <= orderTotal.length - 1; i++) {
+		result += parseFloat($(orderTotal[i]).text());
+	}
+	return result;
+}
+//==================== <-- Products-Counts --> ========================//
+
+$('.card-table__icon').click(function () {
+	$(this).closest('.card-table-item').remove();
+})
