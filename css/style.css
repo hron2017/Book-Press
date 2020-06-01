@@ -4783,7 +4783,6 @@ font-family: "FontAwesome";
   .popup-fillform__input, .about-form__input, .popup-checkout__input {
     border-bottom: 2px solid #a6c632;
     margin-bottom: 15px;
-    padding-left: 30px;
     position: relative; }
     .popup-fillform__input:after, .about-form__input:after, .popup-checkout__input:after {
       content: '*';
@@ -4798,7 +4797,7 @@ font-family: "FontAwesome";
       color: #2d3138;
       font-size: 18px;
       letter-spacing: 0.45px;
-      padding: 10px; }
+      padding: 10px 10px 10px 30px; }
     .popup-fillform__input.err, .err.about-form__input, .err.popup-checkout__input {
       border-bottom: 2px solid #b81d24; }
       .popup-fillform__input.err:after, .err.about-form__input:after, .err.popup-checkout__input:after {
